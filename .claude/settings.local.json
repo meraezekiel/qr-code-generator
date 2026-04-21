@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:online-qr-generator.com)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(curl -sS http://localhost:5173/)",
+      "Bash(curl -sS \"http://localhost:5173/src/main.tsx\")",
+      "Bash(curl -sS \"http://localhost:5173/src/CreateQR/implementation/CreateQR.tsx\")",
+      "Bash(npx vite *)"
+    ]
+  }
+}
