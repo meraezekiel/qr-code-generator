@@ -4,6 +4,27 @@ Rolling log of work on the QR code generator. Newest entry on top. Use this to r
 
 ---
 
+## 2026-04-22 (evening)
+
+### Session summary
+Added the three bottom sections from the reference layout (Desktop screenshots `2026-04-21 212752`, `212805`, `212815`).
+
+### Changes made
+1. `DesignFAQ/` — "Design and creation of QR codes" carousel. 4-card sliding window with prev/next arrows (disabled at ends); clicking a question frames it in green and swaps the answer panel below. Child component `QuestionCard`. Seed FAQs inlined in `useDesignFAQHandler`.
+2. `ScanFAQ/` — "Scanning and printing of QR codes" accordion. Vertical stack with single-open behavior (`openId` state); chevron rotates 180° when open. Concentric-ring decoration copied from `AdvancedFeatures`. Child component `AccordionItem`.
+3. `CTABanner/` — dark `bg-slate-800` card: "Ready to get started?" + circular white arrow button that turns green on hover.
+4. `SiteFooter/` — full-bleed `bg-brand-dark` footer: QR-mark + tagline, three link columns (Service / Company / Help) as placeholder buttons, Register CTA card on the right, copyright + trademark bar below.
+5. Wired all four into `src/CreateQR/implementation/CreateQR.tsx` after `<AdvancedFeatures />`.
+
+### Verification
+- `npx tsc --noEmit` passes.
+- All new folders follow `FILE_STRUCTURE.md` strictly: `Name/index.ts` → `Name/implementation/Name.tsx` + `NameProps.ts` (where props exist) + `useNameHandler.ts`. Child components (`QuestionCard`, `AccordionItem`) sit inside the parent's `/implementation/` with the same shape. FAQ seed data and footer link data live inside the handlers — no stray `data.ts` files.
+
+### Still to visually QA in browser
+- Run `npm run dev` and sanity-check responsive breakpoints (DesignFAQ grid collapses to 2 columns on `sm`, 1 on mobile; SiteFooter stacks cleanly below `md`).
+
+---
+
 ## 2026-04-22
 
 ### Session summary

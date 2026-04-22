@@ -3,6 +3,10 @@ import { QRTypeGrid } from "./QRTypeGrid";
 import { PhonePreview } from "./PhonePreview";
 import { SimpleSteps } from "./SimpleSteps";
 import { AdvancedFeatures } from "./AdvancedFeatures";
+import { DesignFAQ } from "./DesignFAQ";
+import { ScanFAQ } from "./ScanFAQ";
+import { CTABanner } from "./CTABanner";
+import { SiteFooter } from "./SiteFooter";
 import { useCreateQRHandler } from "./useCreateQRHandler";
 
 export function CreateQR() {
@@ -73,6 +77,14 @@ export function CreateQR() {
       <SimpleSteps />
 
       <AdvancedFeatures />
+
+      <DesignFAQ />
+
+      <ScanFAQ />
+
+      <CTABanner />
+
+      <SiteFooter />
     </div>
   );
 }
