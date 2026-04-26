@@ -1,4 +1,4 @@
-import { ArrowRight, HelpCircle, QrCode } from "lucide-react";
+import { ArrowRight, Check, HelpCircle, QrCode } from "lucide-react";
 import { StepperHeaderProps } from "./StepperHeaderProps";
 import { useStepperHeaderHandler } from "./useStepperHeaderHandler";
 
@@ -31,11 +31,15 @@ export function StepperHeader({ activeStep }: StepperHeaderProps) {
                       active
                         ? "bg-brand text-white"
                         : done
-                          ? "bg-brand-dark text-white"
+                          ? "bg-brand text-white"
                           : "bg-slate-200 text-slate-500",
                     ].join(" ")}
                   >
-                    {step.id}
+                    {done ? (
+                      <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                    ) : (
+                      step.id
+                    )}
                   </span>
                   <span
                     className={[
