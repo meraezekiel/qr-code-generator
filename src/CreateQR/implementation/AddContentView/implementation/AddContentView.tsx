@@ -5,13 +5,23 @@ import { WebsiteContent } from "./WebsiteContent";
 import { PDFContent } from "./PDFContent";
 import { ListOfLinksContent } from "./ListOfLinksContent";
 import { VCardContent } from "./VCardContent";
+import { BusinessContent } from "./BusinessContent";
+import { VideoContent } from "./VideoContent";
+import { ImagesContent } from "./ImagesContent";
+import { FacebookContent } from "./FacebookContent";
+import { InstagramContent } from "./InstagramContent";
+import { SocialMediaContent } from "./SocialMediaContent";
+import { WhatsAppContent } from "./WhatsAppContent";
+import { Mp3Content } from "./Mp3Content";
+import { MenuContent } from "./MenuContent";
 
 export function AddContentView({
   selectedType,
+  menuSubType,
   onBack,
   onNext,
 }: AddContentViewProps) {
-  const { viewType } = useAddContentViewHandler(selectedType);
+  const { viewType } = useAddContentViewHandler(selectedType, menuSubType);
 
   return (
     <div className="flex flex-col gap-10">
@@ -22,6 +32,15 @@ export function AddContentView({
       {viewType === "pdf" && <PDFContent />}
       {viewType === "links" && <ListOfLinksContent />}
       {viewType === "vcard" && <VCardContent />}
+      {viewType === "business" && <BusinessContent />}
+      {viewType === "video" && <VideoContent />}
+      {viewType === "images" && <ImagesContent />}
+      {viewType === "facebook" && <FacebookContent />}
+      {viewType === "instagram" && <InstagramContent />}
+      {viewType === "social-media" && <SocialMediaContent />}
+      {viewType === "whatsapp" && <WhatsAppContent />}
+      {viewType === "mp3" && <Mp3Content />}
+      {viewType === "menu" && <MenuContent />}
       {viewType === "website" && <WebsiteContent />}
 
       <div className="flex items-center justify-between pt-4 border-t border-slate-200">

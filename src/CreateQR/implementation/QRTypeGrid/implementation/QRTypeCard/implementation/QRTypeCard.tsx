@@ -23,19 +23,11 @@ export function QRTypeCard({
       onFocus={onFocus}
       onBlur={onBlur}
       className={[
-        "group relative flex flex-col items-center justify-center gap-2 px-3 py-5 rounded-xl border bg-white text-center transition-all",
+        "group relative flex flex-col items-center justify-center gap-2 px-3 py-5 rounded-xl border border-slate-200 bg-white text-center shadow-sm transition-all",
         "hover:border-brand hover:shadow-md hover:-translate-y-0.5",
-        isSelected
-          ? "border-brand ring-2 ring-brand/30 shadow-md"
-          : "border-slate-200 shadow-sm",
       ].join(" ")}
     >
-      <span
-        className={[
-          "w-12 h-12 rounded-full flex items-center justify-center transition-colors",
-          isSelected ? "bg-brand/10" : "bg-brand-subtle group-hover:bg-brand/10",
-        ].join(" ")}
-      >
+      <span className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-subtle group-hover:bg-brand/10 transition-colors">
         <Icon className="w-6 h-6 text-brand" strokeWidth={2} />
       </span>
       <span className="text-sm font-bold text-slate-900">{type.label}</span>

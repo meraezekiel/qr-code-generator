@@ -22,7 +22,7 @@ import { ImageUpload } from "../../ImageUpload";
 import { SocialNetworksSection } from "../../SocialNetworksSection";
 import { useVCardContentHandler } from "./useVCardContentHandler";
 import { VCardPreviewBody } from "./VCardPreviewBody";
-import { ContactAddRow } from "./ContactAddRow";
+import { ContactAddRow } from "../../ContactAddRow";
 
 export function VCardContent() {
   const {

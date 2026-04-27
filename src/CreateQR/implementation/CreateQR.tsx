@@ -8,6 +8,7 @@ import { ScanFAQ } from "./ScanFAQ";
 import { CTABanner } from "./CTABanner";
 import { SiteFooter } from "./SiteFooter";
 import { AddContentView } from "./AddContentView";
+import { MenuTypeModal } from "./MenuTypeModal";
 import { useCreateQRHandler } from "./useCreateQRHandler";
 
 export function CreateQR() {
@@ -15,9 +16,13 @@ export function CreateQR() {
     selectedType,
     activeType,
     currentStep,
+    menuSubType,
+    isMenuModalOpen,
     onSelectType,
     onHoverType,
     onLeaveType,
+    selectMenuSubType,
+    closeMenuModal,
     goToStep1,
     goToStep2,
   } = useCreateQRHandler();
@@ -82,11 +87,19 @@ export function CreateQR() {
         ) : (
           <AddContentView
             selectedType={selectedType}
+            menuSubType={menuSubType}
             onBack={goToStep1}
             onNext={goToStep2}
           />
         )}
       </main>
+
+      {isMenuModalOpen && (
+        <MenuTypeModal
+          onSelect={selectMenuSubType}
+          onClose={closeMenuModal}
+        />
+      )}
 
       {currentStep === 1 && (
         <>
