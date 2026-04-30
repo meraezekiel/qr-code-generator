@@ -1,9 +1,16 @@
 import { Signal, Wifi, BatteryMedium } from "lucide-react";
+import Lottie from "lottie-react";
+import { QRCodeSVG } from "qrcode.react";
 import { PreviewPanelProps } from "./PreviewPanelProps";
 import { usePreviewPanelHandler } from "./usePreviewPanelHandler";
 
-export function PreviewPanel({ children }: PreviewPanelProps) {
-  const { mode, showPreview, showQrCode } = usePreviewPanelHandler();
+export function PreviewPanel({
+  children,
+  qrValue,
+  qrEnabled = false,
+}: PreviewPanelProps) {
+  const { mode, showPreview, showQrCode, isGeneratingQr, lottieData } =
+    usePreviewPanelHandler(qrEnabled, qrValue);
 
   return (
     <div className="flex flex-col items-center gap-4">
@@ -31,11 +38,17 @@ export function PreviewPanel({ children }: PreviewPanelProps) {
           role="tab"
           aria-selected={mode === "qrcode"}
           onClick={showQrCode}
+          disabled={!qrEnabled}
+          aria-disabled={!qrEnabled}
+          title={qrEnabled ? undefined : "Fill in the required fields to view the QR code"}
           className={[
             "px-5 py-1.5 text-sm font-bold rounded-full transition-colors",
             mode === "qrcode"
               ? "bg-brand text-white shadow-sm"
               : "text-slate-600 hover:text-slate-800",
+            !qrEnabled
+              ? "disabled:text-slate-400 disabled:cursor-not-allowed disabled:hover:text-slate-400"
+              : "",
           ].join(" ")}
         >
           QR code
@@ -66,10 +79,47 @@ export function PreviewPanel({ children }: PreviewPanelProps) {
             {mode === "preview" ? (
               <div className="flex-1 min-h-0 flex flex-col">{children}</div>
             ) : (
-              <div className="flex-1 min-h-0 flex items-center justify-center bg-white">
-                <div className="w-44 h-44 rounded-md border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400 text-xs px-3 text-center">
-                  QR code preview
-                </div>
+              <div className="flex-1 min-h-0 flex items-center justify-center bg-white px-6">
+                {qrEnabled && qrValue ? (
+                  <div
+                    className="relative w-full max-w-[232px] aspect-square"
+                    role="img"
+                    aria-label={isGeneratingQr ? "Generating QR code" : "QR code"}
+                    aria-busy={isGeneratingQr || undefined}
+                  >
+                    <QRCodeSVG
+                      value={qrValue}
+                      size={232}
+                      level="M"
+                      marginSize={2}
+                      className={[
+                        "w-full h-full transition-opacity duration-300",
+                        isGeneratingQr ? "opacity-15" : "opacity-100",
+                      ].join(" ")}
+                    />
+                    {isGeneratingQr && (
+                      <div
+                        className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center"
+                        aria-hidden
+                      >
+                        {lottieData ? (
+                          <Lottie
+                            animationData={lottieData}
+                            loop
+                            autoplay
+                            className="w-full h-full"
+                          />
+                        ) : (
+                          <div className="absolute inset-x-0 top-0 h-[2px] bg-slate-900 shadow-[0_0_10px_2px_rgba(15,23,42,0.4)] animate-qr-scan" />
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="w-44 h-44 rounded-md border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400 text-xs px-3 text-center">
+                    QR code preview
+                  </div>
+                )}
               </div>
             )}
 

@@ -6,4 +6,5 @@ export type AddContentViewProps = {
   menuSubType: MenuSubType | null;
   onBack: () => void;
   onNext: () => void;
+  onQrValueChange?: (value: string) => void;
 };

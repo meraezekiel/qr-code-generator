@@ -26,9 +26,15 @@ export default {
           "0%": { opacity: "0", transform: "translateY(6px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "qr-scan": {
+          "0%": { transform: "translateY(0%)" },
+          "50%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0%)" },
+        },
       },
       animation: {
         "phone-fade": "phone-fade 220ms ease-out",
+        "qr-scan": "qr-scan 1.6s ease-in-out infinite",
       },
     },
   },

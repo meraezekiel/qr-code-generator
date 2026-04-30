@@ -11,7 +11,6 @@ import {
   Globe,
   Heart,
   Instagram,
-  Lock,
   Mail,
   MapPin,
   MessageCircle,
@@ -36,6 +35,7 @@ import {
   Wifi,
 } from "lucide-react";
 import { PreviewContentProps } from "./PreviewContentProps";
+import { WebsitePreviewBody } from "../../../../AddContentView/implementation/WebsiteContent/implementation/WebsitePreviewBody";
 
 export function PreviewContent({ activeType }: PreviewContentProps) {
   if (!activeType) {
@@ -121,37 +121,8 @@ function EmptyPreview() {
 
 function WebsitePreview() {
   return (
-    <div className="h-full flex flex-col bg-slate-50">
-      <div className="px-3 pt-2 pb-2 bg-white border-b border-slate-200">
-        <div className="flex items-center gap-1.5 bg-slate-100 rounded-full px-3 py-1.5">
-          <Lock className="w-3 h-3 text-slate-500" strokeWidth={2.5} />
-          <span className="text-[10px] font-medium text-slate-700 truncate">
-            yourbrand.com
-          </span>
-        </div>
-      </div>
-      <div className="px-4 pt-4 flex-1 flex flex-col gap-3">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-brand flex items-center justify-center">
-            <Globe className="w-4 h-4 text-white" strokeWidth={2.5} />
-          </div>
-          <div className="flex-1">
-            <div className="h-2 w-20 bg-slate-800 rounded-full" />
-            <div className="h-1.5 w-16 bg-slate-300 rounded-full mt-1" />
-          </div>
-        </div>
-        <div className="w-full h-24 rounded-lg bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center">
-          <Globe className="w-10 h-10 text-brand/70" strokeWidth={1.5} />
-        </div>
-        <div className="space-y-1.5">
-          <div className="h-1.5 bg-slate-300 rounded-full" />
-          <div className="h-1.5 bg-slate-300 rounded-full w-5/6" />
-          <div className="h-1.5 bg-slate-300 rounded-full w-4/6" />
-        </div>
-        <button className="mt-auto w-full bg-brand text-white text-xs font-semibold py-2 rounded-lg">
-          Visit website
-        </button>
-      </div>
+    <div className="h-full flex flex-col">
+      <WebsitePreviewBody url="" />
     </div>
   );
 }

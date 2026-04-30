@@ -13,7 +13,7 @@ import {
   Type,
   User,
 } from "lucide-react";
-import { ContentSection } from "../../ContentSection";
+import { ContentSection } from "../../../../ContentSection";
 import { PreviewPanel } from "../../PreviewPanel";
 import { FieldText } from "../../FieldText";
 import { FieldTextarea } from "../../FieldTextarea";

@@ -1,0 +1,246 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e14]:
+            - generic [ref=e15]: Online
+            - generic [ref=e16]: QR Generator
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - generic [ref=e19]:
+              - img [ref=e414]
+              - generic [ref=e21]: Select QR type
+            - img [ref=e22]
+          - listitem [ref=e24]:
+            - generic [ref=e25]:
+              - img [ref=e528]
+              - generic [ref=e27]: Add content
+            - img [ref=e28]
+          - listitem [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: "3"
+              - generic [ref=e33]: Design QR code
+            - img [ref=e34]
+          - listitem [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: "4"
+              - generic [ref=e39]: Download QR code
+        - button "Help" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+    - main [ref=e44]:
+      - generic [ref=e530]:
+        - generic [ref=e532]:
+          - heading "3. Design the QR" [level=1] [ref=e533]
+          - generic [ref=e534]:
+            - generic [ref=e535]:
+              - generic [ref=e536]:
+                - button "Collapse section" [expanded] [ref=e537] [cursor=pointer]:
+                  - img [ref=e539]
+                  - generic [ref=e541]:
+                    - heading "Frame" [level=2] [ref=e543]
+                    - paragraph [ref=e544]: Frames make your QR Code stand out from the crowd, inspiring more scans.
+                  - img [ref=e545]
+                - generic [ref=e548]:
+                  - generic [ref=e549]: Frame style
+                  - generic [ref=e550]:
+                    - button [pressed] [ref=e551] [cursor=pointer]:
+                      - img [ref=e554]
+                    - button "Scan Me!" [ref=e556] [cursor=pointer]:
+                      - generic [ref=e558]:
+                        - img [ref=e560]
+                        - generic [ref=e796]: Scan Me!
+                    - button "Scan Me!" [ref=e797] [cursor=pointer]:
+                      - generic [ref=e799]:
+                        - img [ref=e801]
+                        - generic [ref=e1036]: Scan Me!
+                    - button "Scan Me!" [ref=e1037] [cursor=pointer]:
+                      - generic [ref=e1039]:
+                        - img [ref=e1041]
+                        - generic [ref=e1276]: Scan Me!
+                    - button "Scan Me!" [ref=e1277] [cursor=pointer]:
+                      - generic [ref=e1279]:
+                        - img [ref=e1281]
+                        - img [ref=e1516]
+                        - generic [ref=e1518]: Scan Me!
+                    - button "Scan Me!" [ref=e1519] [cursor=pointer]:
+                      - generic [ref=e1521]:
+                        - img [ref=e1523]
+                        - generic [ref=e1759]: Scan Me!
+                    - button "Scan Me!" [ref=e1760] [cursor=pointer]:
+                      - generic [ref=e1762]:
+                        - img [ref=e1764]
+                        - generic [ref=e2000]: Scan Me!
+                    - button "Scan Me!" [ref=e2001] [cursor=pointer]:
+                      - generic [ref=e2003]:
+                        - generic [ref=e2004]: Scan Me!
+                        - img [ref=e2006]
+                    - button "Scan me!" [ref=e2241] [cursor=pointer]:
+                      - generic [ref=e2243]:
+                        - img [ref=e2245]
+                        - generic [ref=e2480]: Scan me!
+                    - button "Scan" [ref=e2481] [cursor=pointer]:
+                      - generic [ref=e2483]:
+                        - img [ref=e2485]
+                        - generic [ref=e2720]:
+                          - img [ref=e2721]
+                          - text: Scan
+                    - button [ref=e2723] [cursor=pointer]:
+                      - generic [ref=e2725]:
+                        - img [ref=e2726]
+                        - img [ref=e2731]
+                    - button [ref=e2966] [cursor=pointer]:
+                      - generic [ref=e2968]:
+                        - img [ref=e2969]
+                        - img [ref=e2972]
+                    - button [ref=e3207] [cursor=pointer]:
+                      - generic [ref=e3209]:
+                        - img [ref=e3210]
+                        - img [ref=e3214]
+                    - button [ref=e3449] [cursor=pointer]:
+                      - generic [ref=e3451]:
+                        - img [ref=e3452]
+                        - img [ref=e3456]
+                    - button [ref=e3691] [cursor=pointer]:
+                      - generic [ref=e3693]:
+                        - img [ref=e3694]
+                        - img [ref=e3700]
+                    - button [ref=e3935] [cursor=pointer]:
+                      - generic [ref=e3937]:
+                        - img [ref=e3938]
+                        - img [ref=e3944]
+              - generic [ref=e4179]:
+                - button "Collapse section" [expanded] [ref=e4180] [cursor=pointer]:
+                  - img [ref=e4182]
+                  - generic [ref=e4188]:
+                    - heading "QR Code Pattern" [level=2] [ref=e4190]
+                    - paragraph [ref=e4191]: Choose a pattern for your QR code and select colors.
+                  - img [ref=e4192]
+                - generic [ref=e4195]:
+                  - generic [ref=e4196]:
+                    - generic [ref=e4197]: Pattern style
+                    - generic [ref=e4198]:
+                      - button [pressed] [ref=e4199] [cursor=pointer]:
+                        - img [ref=e4201]
+                      - button [ref=e4215] [cursor=pointer]:
+                        - img [ref=e4217]
+                      - button [ref=e4231] [cursor=pointer]:
+                        - img [ref=e4233]
+                      - button [ref=e4247] [cursor=pointer]:
+                        - img [ref=e4249]
+                      - button [ref=e4263] [cursor=pointer]:
+                        - img [ref=e4265]
+                      - button [ref=e4279] [cursor=pointer]:
+                        - img [ref=e4281]
+                  - generic [ref=e4295]:
+                    - generic [ref=e4296]: Pattern color
+                    - switch "Use a gradient pattern color" [ref=e4298] [cursor=pointer]:
+                      - generic [ref=e4299]: Use a gradient pattern color
+                    - generic [ref=e4303]:
+                      - generic [ref=e4304]: Pattern color
+                      - generic [ref=e4305]:
+                        - generic "Pick color" [ref=e4306] [cursor=pointer]:
+                          - img [ref=e4307]
+                          - textbox "Pick color" [ref=e4310]: "#000000"
+                        - textbox "Pattern color" [ref=e4311]: "#000000"
+                  - button "Swap pattern and background colors" [ref=e4314] [cursor=pointer]:
+                    - img [ref=e4315]
+                  - generic [ref=e4319]:
+                    - generic [ref=e4320]: Pattern background color
+                    - generic [ref=e4321] [cursor=pointer]:
+                      - checkbox "Transparent background" [ref=e4322]
+                      - text: Transparent background
+                    - switch "Use a gradient background color" [ref=e4324] [cursor=pointer]:
+                      - generic [ref=e4325]: Use a gradient background color
+                    - generic [ref=e4329]:
+                      - generic [ref=e4330]: Background color
+                      - generic [ref=e4331]:
+                        - generic "Pick color" [ref=e4332] [cursor=pointer]:
+                          - img [ref=e4333]
+                          - textbox "Pick color" [ref=e4336]: "#ffffff"
+                        - textbox "Background color" [ref=e4337]: "#FFFFFF"
+                  - generic [ref=e4338]:
+                    - img [ref=e4340]
+                    - generic [ref=e4342]: Remember! For optimal QR code reading results, we recommend using high-contrast colors.
+              - generic [ref=e4343]:
+                - button "Collapse section" [expanded] [ref=e4344] [cursor=pointer]:
+                  - img [ref=e4346]
+                  - generic [ref=e4351]:
+                    - heading "QR Code Corners" [level=2] [ref=e4353]
+                    - paragraph [ref=e4354]: Select your QR code's corner style
+                  - img [ref=e4355]
+                - generic [ref=e4358]:
+                  - generic [ref=e4359]: Corners
+                  - generic [ref=e4360]:
+                    - generic [ref=e4361]:
+                      - generic [ref=e4362]: Frame around corner dots style
+                      - generic [ref=e4363]:
+                        - button [pressed] [ref=e4364] [cursor=pointer]:
+                          - img [ref=e4367]
+                        - button [ref=e4369] [cursor=pointer]
+                        - button [ref=e4372] [cursor=pointer]
+                        - button [ref=e4375] [cursor=pointer]
+                        - button [ref=e4378] [cursor=pointer]
+                        - button [ref=e4381] [cursor=pointer]
+                    - generic [ref=e4384]:
+                      - generic [ref=e4385]: Corner dots type
+                      - generic [ref=e4386]:
+                        - button [pressed] [ref=e4387] [cursor=pointer]:
+                          - img [ref=e4390]
+                        - button [ref=e4392] [cursor=pointer]
+                        - button [ref=e4395] [cursor=pointer]
+                        - button [ref=e4398] [cursor=pointer]
+                        - button [ref=e4401] [cursor=pointer]
+                        - button [ref=e4404] [cursor=pointer]
+                        - button [ref=e4407] [cursor=pointer]
+                        - button [ref=e4410] [cursor=pointer]
+                  - generic [ref=e4413]:
+                    - generic [ref=e4414]:
+                      - generic [ref=e4415]: Frame around corner dots color
+                      - generic [ref=e4416]:
+                        - generic "Pick color" [ref=e4417] [cursor=pointer]:
+                          - img [ref=e4418]
+                          - textbox "Pick color" [ref=e4421]: "#000000"
+                        - textbox "Frame around corner dots color" [ref=e4422]: "#000000"
+                    - generic [ref=e4423]:
+                      - generic [ref=e4424]: Corner dots color
+                      - generic [ref=e4425]:
+                        - generic "Pick color" [ref=e4426] [cursor=pointer]:
+                          - img [ref=e4427]
+                          - textbox "Pick color" [ref=e4430]: "#000000"
+                        - textbox "Corner dots color" [ref=e4431]: "#000000"
+              - generic [ref=e4432]:
+                - button "Collapse section" [expanded] [ref=e4433] [cursor=pointer]:
+                  - img [ref=e4435]
+                  - generic [ref=e4439]:
+                    - heading "Add Logo" [level=2] [ref=e4441]
+                    - paragraph [ref=e4442]: Make your QR code unique by adding your logo or an image
+                  - img [ref=e4443]
+                - generic [ref=e4446]:
+                  - generic [ref=e4447]: "Upload your logo (Maximum size: 1 MB)"
+                  - button "Upload logo" [ref=e4449] [cursor=pointer]:
+                    - img [ref=e4450]
+            - generic [ref=e4455]:
+              - tablist "Preview mode" [ref=e4456]:
+                - tab "Preview" [ref=e4457] [cursor=pointer]
+                - tab "QR code" [selected] [ref=e4458] [cursor=pointer]
+              - generic "Phone preview" [ref=e4459]:
+                - generic [ref=e4464]:
+                  - generic [ref=e4466]:
+                    - generic [ref=e4467]: 9:41
+                    - generic [ref=e4468]:
+                      - img [ref=e4469]
+                      - img [ref=e4470]
+                      - img [ref=e4474]
+                  - img "QR code" [ref=e4477]:
+                    - img "QR code preview" [ref=e4480]:
+                      - img [ref=e4481]
+        - generic [ref=e4493]:
+          - button "Back" [ref=e4494] [cursor=pointer]:
+            - img [ref=e4495]
+            - text: Back
+          - button "Create" [ref=e4497] [cursor=pointer]:
+            - text: Create
+            - img [ref=e4498]
+  - region "Notifications alt+T"

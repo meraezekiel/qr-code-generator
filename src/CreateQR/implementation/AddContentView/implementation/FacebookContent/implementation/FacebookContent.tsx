@@ -12,7 +12,7 @@ import {
   User,
 } from "lucide-react";
 import { SiFacebook } from "react-icons/si";
-import { ContentSection } from "../../ContentSection";
+import { ContentSection } from "../../../../ContentSection";
 import { PreviewPanel } from "../../PreviewPanel";
 import { FieldText } from "../../FieldText";
 import { FieldTextarea } from "../../FieldTextarea";

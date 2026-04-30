@@ -1,0 +1,93 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e14]:
+            - generic [ref=e15]: Online
+            - generic [ref=e16]: QR Generator
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - generic [ref=e19]:
+              - img [ref=e414]
+              - generic [ref=e21]: Select QR type
+            - img [ref=e22]
+          - listitem [ref=e24]:
+            - generic [ref=e25]:
+              - img [ref=e528]
+              - generic [ref=e27]: Add content
+            - img [ref=e28]
+          - listitem [ref=e30]:
+            - generic [ref=e31]:
+              - img [ref=e4500]
+              - generic [ref=e33]: Design QR code
+            - img [ref=e34]
+          - listitem [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: "4"
+              - generic [ref=e39]: Download QR code
+        - button "Help" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+    - main [ref=e44]:
+      - generic [ref=e4503]:
+        - button "Back" [ref=e4504] [cursor=pointer]:
+          - img [ref=e4505]
+          - text: Back
+        - generic [ref=e4507]:
+          - generic [ref=e4508]:
+            - generic [ref=e4509]:
+              - img [ref=e4511]
+              - heading "Download Your QR Code" [level=2] [ref=e4517]
+              - paragraph [ref=e4518]: Enter your email address to receive your QR code
+            - generic [ref=e4519]:
+              - generic [ref=e4520]:
+                - generic [ref=e4521]: Email
+                - generic [ref=e4522]:
+                  - img [ref=e4523]
+                  - textbox "Email" [ref=e4526]:
+                    - /placeholder: Enter your email here
+              - button "Submit" [ref=e4527] [cursor=pointer]
+            - generic [ref=e4530]: OR
+            - button "Continue with Google" [ref=e4532] [cursor=pointer]:
+              - img [ref=e4533]
+              - text: Continue with Google
+            - generic [ref=e4538]:
+              - heading "Enter your email to access all of our features" [level=3] [ref=e4539]
+              - list [ref=e4540]:
+                - listitem [ref=e4541]:
+                  - img [ref=e4542]
+                  - text: Receive your QR code by email
+                - listitem [ref=e4545]:
+                  - img [ref=e4546]
+                  - text: Download your QR code in multiple formats
+                - listitem [ref=e4551]:
+                  - img [ref=e4552]
+                  - text: Edit your QR code content, even after printing it
+                - listitem [ref=e4554]:
+                  - img [ref=e4555]
+                  - text: Create unlimited QR codes
+                - listitem [ref=e4561]:
+                  - img [ref=e4562]
+                  - text: Track your QR codes with powerful analytics
+                - listitem [ref=e4565]:
+                  - img [ref=e4566]
+                  - text: Manage all your QR code in one place
+                - listitem [ref=e4571]:
+                  - img [ref=e4572]
+                  - text: Much more!
+          - generic [ref=e4578]:
+            - generic [ref=e4579]:
+              - img [ref=e4581]
+              - heading "Your QR Code Is Ready" [level=2] [ref=e4583]
+            - generic [ref=e4590]:
+              - img "QR code preview" [ref=e4592]:
+                - img [ref=e4593]
+              - generic [ref=e4602]: https://example.com
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e4603]:
+        - img [ref=e4605]
+        - generic [ref=e4607]:
+          - generic [ref=e4608]: QR code created!
+          - generic [ref=e4609]: Pick a format on the next step to download it.

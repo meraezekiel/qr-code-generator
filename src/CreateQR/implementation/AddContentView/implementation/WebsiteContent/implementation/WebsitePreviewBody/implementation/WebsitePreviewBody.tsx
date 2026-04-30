@@ -1,6 +1,9 @@
 import { Globe } from "lucide-react";
+import { WebsitePreviewBodyProps } from "./WebsitePreviewBodyProps";
 
-export function WebsitePreviewBody() {
+export function WebsitePreviewBody({ url }: WebsitePreviewBodyProps) {
+  const display = url.trim() || "https://online-qr-generator.com";
+
   return (
     <>
       <div className="bg-orange-500 px-4 pt-4 pb-6">
@@ -10,12 +13,15 @@ export function WebsitePreviewBody() {
             strokeWidth={2.5}
           />
           <span className="text-[11px] font-medium text-slate-800 truncate">
-            https://online-qr-generator.com
+            {display}
           </span>
         </div>
       </div>
 
-      <div className="flex-1 bg-white px-5 pt-6 flex flex-col items-center gap-4">
+      <div
+        className="flex-1 bg-white px-5 pt-6 flex flex-col items-center gap-4 animate-pulse"
+        aria-hidden
+      >
         <div className="w-full h-24 rounded-md bg-slate-200" />
         <div className="w-full h-2.5 rounded bg-slate-200" />
         <div className="w-3/4 h-2.5 rounded bg-slate-200" />

@@ -1,5 +1,5 @@
 import { ChevronDown, MessageCircle, QrCode } from "lucide-react";
-import { ContentSection } from "../../ContentSection";
+import { ContentSection } from "../../../../ContentSection";
 import { PreviewPanel } from "../../PreviewPanel";
 import { FieldTextarea } from "../../FieldTextarea";
 import { useWhatsAppContentHandler } from "./useWhatsAppContentHandler";

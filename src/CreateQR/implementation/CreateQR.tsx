@@ -8,6 +8,8 @@ import { ScanFAQ } from "./ScanFAQ";
 import { CTABanner } from "./CTABanner";
 import { SiteFooter } from "./SiteFooter";
 import { AddContentView } from "./AddContentView";
+import { DesignQRView } from "./DesignQRView";
+import { DownloadQRView } from "./DownloadQRView";
 import { MenuTypeModal } from "./MenuTypeModal";
 import { useCreateQRHandler } from "./useCreateQRHandler";
 
@@ -18,6 +20,9 @@ export function CreateQR() {
     currentStep,
     menuSubType,
     isMenuModalOpen,
+    qrValue,
+    setQrValue,
+    designHandler,
     onSelectType,
     onHoverType,
     onLeaveType,
@@ -25,14 +30,29 @@ export function CreateQR() {
     closeMenuModal,
     goToStep1,
     goToStep2,
+    goToStep3,
+    goToStep4,
   } = useCreateQRHandler();
 
+  const isStep1 = currentStep === 1;
+
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
+    <div
+      className={[
+        "bg-slate-50 flex flex-col",
+        isStep1 ? "min-h-screen" : "h-screen overflow-hidden",
+      ].join(" ")}
+    >
       <StepperHeader activeStep={currentStep} />
 
-      <main className="flex-1 w-full max-w-[1400px] mx-auto px-6 pt-8 pb-16">
-        {currentStep === 1 ? (
+      <main
+        className={
+          isStep1
+            ? "flex-1 w-full max-w-[1400px] mx-auto px-6 pt-8 pb-16"
+            : "flex-1 w-full overflow-hidden flex flex-col"
+        }
+      >
+        {currentStep === 1 && (
           <>
             <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-10">
               <span className="text-brand">Easily create a QR code</span>{" "}
@@ -84,12 +104,34 @@ export function CreateQR() {
               </div>
             </div>
           </>
-        ) : (
+        )}
+
+        {currentStep === 2 && (
           <AddContentView
             selectedType={selectedType}
             menuSubType={menuSubType}
+            onQrValueChange={setQrValue}
             onBack={goToStep1}
-            onNext={goToStep2}
+            onNext={goToStep3}
+          />
+        )}
+
+        {currentStep === 3 && (
+          <DesignQRView
+            selectedType={selectedType}
+            qrValue={qrValue}
+            designHandler={designHandler}
+            onBack={goToStep2}
+            onCreate={goToStep4}
+          />
+        )}
+
+        {currentStep === 4 && (
+          <DownloadQRView
+            selectedType={selectedType}
+            qrValue={qrValue}
+            design={designHandler.design}
+            onBack={goToStep3}
           />
         )}
       </main>

@@ -2,13 +2,16 @@ import { useState } from "react";
 import { toast } from "sonner";
 import type { QRType } from "./QRTypeGrid/implementation/QRTypeGridProps";
 import type { MenuSubType } from "./MenuTypeModal";
+import { useDesignQRViewHandler } from "./DesignQRView/implementation/useDesignQRViewHandler";
 
 export function useCreateQRHandler() {
   const [selectedType, setSelectedType] = useState<QRType | null>(null);
   const [hoveredType, setHoveredType] = useState<QRType | null>(null);
-  const [currentStep, setCurrentStep] = useState<1 | 2>(1);
+  const [currentStep, setCurrentStep] = useState<1 | 2 | 3 | 4>(1);
   const [menuSubType, setMenuSubType] = useState<MenuSubType | null>(null);
   const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
+  const [qrValue, setQrValue] = useState("");
+  const designHandler = useDesignQRViewHandler();
 
   const onSelectType = (type: QRType) => {
     if (type.id === "menu") {
@@ -51,6 +54,13 @@ export function useCreateQRHandler() {
 
   const goToStep1 = () => setCurrentStep(1);
   const goToStep2 = () => setCurrentStep(2);
+  const goToStep3 = () => setCurrentStep(3);
+  const goToStep4 = () => {
+    setCurrentStep(4);
+    toast.success("QR code created!", {
+      description: "Pick a format on the next step to download it.",
+    });
+  };
 
   const activeType = hoveredType ?? selectedType;
 
@@ -60,6 +70,9 @@ export function useCreateQRHandler() {
     currentStep,
     menuSubType,
     isMenuModalOpen,
+    qrValue,
+    setQrValue,
+    designHandler,
     onSelectType,
     onHoverType,
     onLeaveType,
@@ -67,5 +80,7 @@ export function useCreateQRHandler() {
     closeMenuModal,
     goToStep1,
     goToStep2,
+    goToStep3,
+    goToStep4,
   };
 }

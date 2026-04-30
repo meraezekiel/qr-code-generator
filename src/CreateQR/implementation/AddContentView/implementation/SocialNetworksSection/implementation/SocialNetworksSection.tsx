@@ -1,5 +1,5 @@
 import { Globe } from "lucide-react";
-import { ContentSection } from "../../ContentSection";
+import { ContentSection } from "../../../../ContentSection";
 import { SocialNetworksSectionProps } from "./SocialNetworksSectionProps";
 import { useSocialNetworksSectionHandler } from "./useSocialNetworksSectionHandler";
 
