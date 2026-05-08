@@ -25,8 +25,14 @@ const FEATURES: Array<{ icon: IconComponent; label: string }> = [
 ];
 
 export function DownloadQRView({ qrValue, design, onBack }: DownloadQRViewProps) {
-  const { email, setEmail, submit, continueWithGoogle, onBack: handleBack } =
-    useDownloadQRViewHandler({ onBack });
+  const {
+    email,
+    setEmail,
+    submit,
+    submitting,
+    continueWithGoogle,
+    onBack: handleBack,
+  } = useDownloadQRViewHandler({ qrValue, design, onBack });
 
   const labelText = qrValue.trim() || "Scan Me!";
 
@@ -82,9 +88,10 @@ export function DownloadQRView({ qrValue, design, onBack }: DownloadQRViewProps)
               </div>
               <button
                 type="submit"
-                className="w-full py-3 rounded-lg bg-brand text-white text-sm font-bold hover:bg-brand-dark transition-colors shadow-sm"
+                disabled={submitting}
+                className="w-full py-3 rounded-lg bg-brand text-white text-sm font-bold hover:bg-brand-dark transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Submit
+                {submitting ? "Sending..." : "Submit"}
               </button>
             </form>
 
