@@ -1,0 +1,164 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e14]:
+            - generic [ref=e15]: Online
+            - generic [ref=e16]: QR Generator
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - generic [ref=e19]:
+              - img [ref=e457]
+              - generic [ref=e21]: Select QR type
+            - img [ref=e22]
+          - listitem [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: "2"
+              - generic [ref=e27]: Add content
+            - img [ref=e28]
+          - listitem [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: "3"
+              - generic [ref=e33]: Design QR code
+            - img [ref=e34]
+          - listitem [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: "4"
+              - generic [ref=e39]: Download QR code
+        - button "Help" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+    - main [ref=e44]:
+      - generic [ref=e459]:
+        - generic [ref=e461]:
+          - heading "2. Add content to your QR code" [level=1] [ref=e462]
+          - generic [ref=e463]:
+            - generic [ref=e464]:
+              - generic [ref=e465]:
+                - button "Collapse section" [expanded] [ref=e466] [cursor=pointer]:
+                  - img [ref=e468]
+                  - generic [ref=e471]:
+                    - generic [ref=e472]:
+                      - heading "PDF File" [level=2] [ref=e473]
+                      - generic [ref=e474]: "*"
+                    - paragraph [ref=e475]: Upload the PDF file you want to display.
+                  - img [ref=e476]
+                - generic [ref=e479]:
+                  - generic [ref=e480]:
+                    - img [ref=e482]
+                    - button "Upload PDF" [ref=e485] [cursor=pointer]
+                    - paragraph [ref=e486]: "Maximum size: 100MB"
+                  - generic [ref=e487] [cursor=pointer]:
+                    - checkbox "Directly show the PDF file." [ref=e488]
+                    - generic [ref=e489]: Directly show the PDF file.
+              - generic [ref=e490]:
+                - button "Collapse section" [expanded] [ref=e491] [cursor=pointer]:
+                  - img [ref=e493]
+                  - generic [ref=e499]:
+                    - heading "Design" [level=2] [ref=e501]
+                    - paragraph [ref=e502]: Choose a color theme for your page.
+                  - img [ref=e503]
+                - generic [ref=e506]:
+                  - generic [ref=e507]: Color palette
+                  - generic [ref=e508]:
+                    - button "Color palette blue-green" [ref=e509] [cursor=pointer]
+                    - button "Color palette white-black" [ref=e513] [cursor=pointer]
+                    - button "Color palette sky-blue" [ref=e517] [cursor=pointer]
+                    - button "Color palette violet" [ref=e521] [cursor=pointer]
+                    - button "Color palette emerald" [ref=e525] [cursor=pointer]
+                    - button "Color palette amber" [active] [pressed] [ref=e529] [cursor=pointer]
+              - generic [ref=e533]:
+                - button "Collapse section" [expanded] [ref=e534] [cursor=pointer]:
+                  - img [ref=e536]
+                  - generic [ref=e538]:
+                    - heading "PDF Information" [level=2] [ref=e540]
+                    - paragraph [ref=e541]: Add some context to your PDF.
+                  - img [ref=e542]
+                - generic [ref=e545]:
+                  - generic [ref=e546]:
+                    - generic [ref=e547]: Company
+                    - textbox "Company" [ref=e548]:
+                      - /placeholder: E.g. My Firm
+                      - text: Acme Co.
+                  - generic [ref=e549]:
+                    - generic [ref=e550]: PDF title *
+                    - textbox "PDF title *" [ref=e551]:
+                      - /placeholder: E.g. Annual Report
+                      - text: My Functional Test
+                  - generic [ref=e552]:
+                    - generic [ref=e553]: Description
+                    - textbox "Description" [ref=e554]:
+                      - /placeholder: E.g. My Firm's Annual Report
+                    - generic [ref=e555]: 0 / 4000
+                  - generic [ref=e556]:
+                    - generic [ref=e557]: Website
+                    - textbox "Website" [ref=e558]:
+                      - /placeholder: E.g. https://www.myfirm.com/
+                  - generic [ref=e559]:
+                    - generic [ref=e560]: Button
+                    - textbox "Button" [ref=e561]:
+                      - /placeholder: E.g. View pdf
+                      - text: View PDF
+              - button "Expand section" [ref=e563] [cursor=pointer]:
+                - img [ref=e565]
+                - generic [ref=e567]:
+                  - heading "Fonts" [level=2] [ref=e569]
+                  - paragraph [ref=e570]: Make your page unique with original fonts.
+                - img [ref=e571]
+              - button "Expand section" [ref=e574] [cursor=pointer]:
+                - img [ref=e576]
+                - generic [ref=e579]:
+                  - heading "Welcome Screen" [level=2] [ref=e581]
+                  - paragraph [ref=e582]: Display an image while your page loads.
+                - img [ref=e583]
+              - button "Expand section" [ref=e586] [cursor=pointer]:
+                - img [ref=e588]
+                - generic [ref=e594]:
+                  - heading "Name of the QR Code" [level=2] [ref=e596]
+                  - paragraph [ref=e597]: Give a name to your QR code.
+                - img [ref=e598]
+              - button "Expand section" [ref=e601] [cursor=pointer]:
+                - img [ref=e603]
+                - generic [ref=e607]:
+                  - heading "Password" [level=2] [ref=e608]
+                  - img [ref=e609]
+                - img [ref=e612]
+            - generic [ref=e615]:
+              - tablist "Preview mode" [ref=e616]:
+                - tab "Preview" [selected] [ref=e617] [cursor=pointer]
+                - tab "QR code" [disabled] [ref=e618]
+              - generic "Phone preview" [ref=e619]:
+                - generic [ref=e624]:
+                  - generic [ref=e626]:
+                    - generic [ref=e627]: 9:41
+                    - generic [ref=e628]:
+                      - img [ref=e629]
+                      - img [ref=e630]
+                      - img [ref=e634]
+                  - generic [ref=e636]:
+                    - generic [ref=e637]:
+                      - generic [ref=e638]: Acme Co.
+                      - heading "My Functional Test" [level=2] [ref=e684]
+                      - paragraph [ref=e640]: Our best year yet! See how we achieved record-breaking success in our annual report
+                    - generic [ref=e641]:
+                      - generic [ref=e643]:
+                        - img [ref=e644]
+                        - img [ref=e646]
+                        - img [ref=e649]
+                        - img [ref=e652]
+                      - button "View PDF" [ref=e656] [cursor=pointer]:
+                        - img [ref=e657]
+                        - text: View PDF
+                      - generic [ref=e660]:
+                        - img [ref=e661]
+                        - generic [ref=e664]: www.online-qr-generator.com
+                        - img [ref=e665]
+        - generic [ref=e670]:
+          - button "Back" [ref=e671] [cursor=pointer]:
+            - img [ref=e672]
+            - text: Back
+          - button "Next" [disabled] [ref=e674]:
+            - text: Next
+            - img [ref=e675]
+  - region "Notifications alt+T"

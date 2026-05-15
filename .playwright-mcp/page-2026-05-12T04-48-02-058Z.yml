@@ -1,0 +1,246 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img [ref=e8]
+          - generic [ref=e14]:
+            - generic [ref=e15]: Online
+            - generic [ref=e16]: QR Generator
+        - list [ref=e17]:
+          - listitem [ref=e18]:
+            - generic [ref=e19]:
+              - generic [ref=e20]: "1"
+              - generic [ref=e21]: Select QR type
+            - img [ref=e22]
+          - listitem [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: "2"
+              - generic [ref=e27]: Add content
+            - img [ref=e28]
+          - listitem [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: "3"
+              - generic [ref=e33]: Design QR code
+            - img [ref=e34]
+          - listitem [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: "4"
+              - generic [ref=e39]: Download QR code
+        - button "Help" [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+    - main [ref=e44]:
+      - heading "Easily create a QR code for any occasion in seconds!" [level=1] [ref=e45]
+      - generic [ref=e46]:
+        - radiogroup "QR code type" [ref=e47]:
+          - radio "Website Link to any website URL" [ref=e48] [cursor=pointer]:
+            - img [ref=e50]
+            - generic [ref=e53]: Website
+            - generic [ref=e54]: Link to any website URL
+          - radio "PDF Show a PDF" [ref=e55] [cursor=pointer]:
+            - img [ref=e57]
+            - generic [ref=e60]: PDF
+            - generic [ref=e61]: Show a PDF
+          - radio "List of Links Share multiple links" [ref=e62] [cursor=pointer]:
+            - img [ref=e64]
+            - generic [ref=e67]: List of Links
+            - generic [ref=e68]: Share multiple links
+          - radio "vCard Share a digital business card" [ref=e69] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e75]: vCard
+            - generic [ref=e76]: Share a digital business card
+          - radio "Business Share information about your business" [ref=e77] [cursor=pointer]:
+            - img [ref=e79]
+            - generic [ref=e82]: Business
+            - generic [ref=e83]: Share information about your business
+          - radio "Video Show a video" [ref=e84] [cursor=pointer]:
+            - img [ref=e86]
+            - generic [ref=e89]: Video
+            - generic [ref=e90]: Show a video
+          - radio "Images Share multiple images" [ref=e91] [cursor=pointer]:
+            - img [ref=e93]
+            - generic [ref=e97]: Images
+            - generic [ref=e98]: Share multiple images
+          - radio "Facebook Share your Facebook page" [ref=e99] [cursor=pointer]:
+            - img [ref=e101]
+            - generic [ref=e103]: Facebook
+            - generic [ref=e104]: Share your Facebook page
+          - radio "Instagram Share your Instagram" [ref=e105] [cursor=pointer]:
+            - img [ref=e107]
+            - generic [ref=e110]: Instagram
+            - generic [ref=e111]: Share your Instagram
+          - radio "Social Media Share your social channels" [ref=e112] [cursor=pointer]:
+            - img [ref=e114]
+            - generic [ref=e120]: Social Media
+            - generic [ref=e121]: Share your social channels
+          - radio "WhatsApp Get WhatsApp messages" [ref=e122] [cursor=pointer]:
+            - img [ref=e124]
+            - generic [ref=e126]: WhatsApp
+            - generic [ref=e127]: Get WhatsApp messages
+          - radio "MP3 Share an audio file" [ref=e128] [cursor=pointer]:
+            - img [ref=e130]
+            - generic [ref=e134]: MP3
+            - generic [ref=e135]: Share an audio file
+          - radio "Menu Create a restaurant menu" [ref=e136] [cursor=pointer]:
+            - img [ref=e138]
+            - generic [ref=e139]: Menu
+            - generic [ref=e140]: Create a restaurant menu
+          - radio "Apps Redirect to an app store" [ref=e141] [cursor=pointer]:
+            - img [ref=e143]
+            - generic [ref=e145]: Apps
+            - generic [ref=e146]: Redirect to an app store
+          - radio "Coupon Share a coupon" [ref=e147] [cursor=pointer]:
+            - img [ref=e149]
+            - generic [ref=e151]: Coupon
+            - generic [ref=e152]: Share a coupon
+          - radio "WiFi Connect to a Wi-Fi network" [ref=e153] [cursor=pointer]:
+            - img [ref=e155]
+            - generic [ref=e159]: WiFi
+            - generic [ref=e160]: Connect to a Wi-Fi network
+        - generic "Phone preview" [ref=e162]:
+          - generic [ref=e167]:
+            - generic [ref=e169]:
+              - generic [ref=e170]: 9:41
+              - generic [ref=e171]:
+                - img [ref=e172]
+                - img [ref=e173]
+                - img [ref=e177]
+            - generic [ref=e179]: Home
+            - generic [ref=e181]:
+              - img [ref=e187]
+              - paragraph [ref=e246]: Hover a QR type to preview it here
+    - generic [ref=e249]:
+      - heading "Create your QR code in three simple steps" [level=2] [ref=e250]:
+        - text: Create your
+        - text: QR code in three simple steps
+      - generic [ref=e251]:
+        - generic [ref=e254]:
+          - img [ref=e256]
+          - heading "Choose your QR code content" [level=3] [ref=e259]
+          - paragraph [ref=e260]: Decide what you want to share. You can use URLs, videos, apps, and more!
+        - generic [ref=e269]:
+          - img [ref=e271]
+          - heading "Customize your design" [level=3] [ref=e275]
+          - paragraph [ref=e276]: Personalize your QR code's color, shape, and style to create a unique design that matches your brand!
+        - generic [ref=e285]:
+          - img [ref=e287]
+          - heading "Download your QR code" [level=3] [ref=e291]
+          - paragraph [ref=e292]: Save your QR code as a PNG, SVG, JPG or EPS. Print it or share it digitally!
+    - generic [ref=e294]:
+      - heading "Experience the most advanced QR code generator" [level=2] [ref=e295]:
+        - text: Experience the most
+        - text: advanced QR code generator
+      - paragraph [ref=e296]: Our QR code software is highly functional and customizable, yet easy to use for all. It's the only tool you'll need to build powerful, high-performing QR codes that can boost engagement and drive conversions.
+      - generic [ref=e297]:
+        - generic [ref=e298]:
+          - img [ref=e300]
+          - heading "High-tech QR codes" [level=3] [ref=e306]
+          - paragraph [ref=e307]: Access advanced functionalities with our dynamic QR code generator. Customize colors, layout, and logo on various QR code types and easily scan them on any device.
+        - generic [ref=e308]:
+          - img [ref=e310]
+          - heading "High conversion rates" [level=3] [ref=e313]
+          - paragraph [ref=e314]: Create high-performing QR codes that accurately represent your brand and design, resulting in high scan rates. Qr-code-maker
+        - generic [ref=e315]:
+          - img [ref=e317]
+          - heading "Real-time analytics" [level=3] [ref=e319]
+          - paragraph [ref=e320]: Boost your marketing campaigns with access to real-time analytics for each generated QR code that shows when, where and how many times your QR codes were scanned.
+        - generic [ref=e321]:
+          - img [ref=e323]
+          - heading "Easy landing pages" [level=3] [ref=e327]
+          - paragraph [ref=e328]: There's no need for you to build a website. Our custom QR code generator platform can help you quickly and easily create customizable landing pages for all of your QR code needs.
+        - generic [ref=e329]:
+          - img [ref=e331]
+          - heading "Multiple types of QR codes" [level=3] [ref=e336]
+          - paragraph [ref=e337]: Easily create various QR code types with customized options to meet your specific needs. From URLs and vCards to Wi-Fi and PDFs — we've got you covered.
+        - generic [ref=e338]:
+          - img [ref=e340]
+          - heading "Full customization" [level=3] [ref=e341]
+          - paragraph [ref=e342]: Bring your QR codes to life by customizing them with our endless array of colors, shapes, frames, and logos that fit perfectly with your brand.
+        - generic [ref=e343]:
+          - img [ref=e345]
+          - heading "Easily download, share & edit" [level=3] [ref=e348]
+          - paragraph [ref=e349]: Keep the highest resolution for print and digital use. Download in PNG, SVG, JPG, or EPS — and edit any dynamic QR code at any time without reprinting.
+        - generic [ref=e350]:
+          - img [ref=e352]
+          - heading "Get started now!" [level=3] [ref=e354]
+          - paragraph [ref=e355]: Ready to create your first QR code? Take advantage of our free QR code generator to quickly design and download your QR code in just a few clicks.
+    - generic [ref=e356]:
+      - heading "Design and creation of QR codes" [level=2] [ref=e357]
+      - generic [ref=e358]:
+        - button "Previous questions" [disabled] [ref=e359]:
+          - img [ref=e360]
+        - button "Next questions" [ref=e362] [cursor=pointer]:
+          - img [ref=e363]
+      - generic [ref=e365]:
+        - button "Can I edit my QR codes?" [ref=e366] [cursor=pointer]:
+          - generic [ref=e367]: Can I edit my QR codes?
+        - button "Can I customize my QR codes or use different colors?" [ref=e368] [cursor=pointer]:
+          - generic [ref=e369]: Can I customize my QR codes or use different colors?
+        - button "Is there a limit to how many QR codes I can create?" [ref=e370] [cursor=pointer]:
+          - generic [ref=e371]: Is there a limit to how many QR codes I can create?
+        - button "Is it possible to use QR codes for commercial purposes?" [ref=e372] [cursor=pointer]:
+          - generic [ref=e373]: Is it possible to use QR codes for commercial purposes?
+      - generic [ref=e374]:
+        - heading "Can I edit my QR codes?" [level=3] [ref=e375]
+        - paragraph [ref=e376]: Yes, dynamic codes can be edited at any time, allowing you to update the destination that they point to. By clicking on the “Edit” button of a QR code from your dashboard, you will be able to update its content, even if it’s already printed. You can also edit the look and feel of your QR codes by customizing the design and colors that they use.
+    - generic [ref=e378]:
+      - heading "Scanning and printing of QR codes" [level=2] [ref=e379]
+      - generic [ref=e380]:
+        - generic [ref=e381]:
+          - button "Can I add a QR code to my website (and will people be able to scan it)?" [expanded] [ref=e382] [cursor=pointer]:
+            - generic [ref=e383]: Can I add a QR code to my website (and will people be able to scan it)?
+            - img [ref=e384]
+          - paragraph [ref=e387]: Yes — simply download your QR code as a PNG or SVG and embed it like any other image. As long as the image is large enough to render clearly (at least 150×150 pixels on screen), visitors can scan it directly from their phone camera.
+        - button "How do you scan a QR code?" [ref=e389] [cursor=pointer]:
+          - generic [ref=e390]: How do you scan a QR code?
+          - img [ref=e391]
+        - button "How do I print my QR code?" [ref=e394] [cursor=pointer]:
+          - generic [ref=e395]: How do I print my QR code?
+          - img [ref=e396]
+        - button "What data is collected in dynamic QR code scans?" [ref=e399] [cursor=pointer]:
+          - generic [ref=e400]: What data is collected in dynamic QR code scans?
+          - img [ref=e401]
+        - button "Do QR codes have a scan counter?" [ref=e404] [cursor=pointer]:
+          - generic [ref=e405]: Do QR codes have a scan counter?
+          - img [ref=e406]
+    - generic [ref=e409]:
+      - generic [ref=e410]:
+        - heading "Ready to get started?" [level=2] [ref=e411]
+        - paragraph [ref=e412]: Sign up today to build your customizable and fully trackable QR codes. Unlock advanced insights, implement your branding and make updates to your QR codes at any time.
+      - button "Get started" [ref=e413] [cursor=pointer]:
+        - img [ref=e414]
+    - contentinfo [ref=e416]:
+      - generic [ref=e417]:
+        - generic [ref=e418]:
+          - img [ref=e419]
+          - paragraph [ref=e425]: Take your business or idea to the next level with Online QR Generator
+        - generic [ref=e426]:
+          - heading "Service" [level=3] [ref=e427]
+          - list [ref=e428]:
+            - listitem [ref=e429]:
+              - button "Create QR" [ref=e430] [cursor=pointer]
+            - listitem [ref=e431]:
+              - button "Plans and Prices" [ref=e432] [cursor=pointer]
+            - listitem [ref=e433]:
+              - button "Language" [ref=e434] [cursor=pointer]
+        - generic [ref=e435]:
+          - heading "Company" [level=3] [ref=e436]
+          - list [ref=e437]:
+            - listitem [ref=e438]:
+              - button "Terms & Conditions" [ref=e439] [cursor=pointer]
+            - listitem [ref=e440]:
+              - button "Privacy Policy" [ref=e441] [cursor=pointer]
+        - generic [ref=e442]:
+          - heading "Help" [level=3] [ref=e443]
+          - list [ref=e444]:
+            - listitem [ref=e445]:
+              - button "FAQ" [ref=e446] [cursor=pointer]
+            - listitem [ref=e447]:
+              - button "Cancel subscription" [ref=e448] [cursor=pointer]
+        - generic [ref=e450]:
+          - paragraph [ref=e451]: Generate, Manage & Track your QR codes 👇
+          - button "Register" [ref=e452] [cursor=pointer]
+      - generic [ref=e454]:
+        - generic [ref=e455]: 2026 © Online QR Generator All rights reserved
+        - generic [ref=e456]: "'QR Code' is a trademark of DENSO WAVE INCORPORATED"
+  - region "Notifications alt+T"

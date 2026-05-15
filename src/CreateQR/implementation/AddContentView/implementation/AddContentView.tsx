@@ -27,10 +27,14 @@ export function AddContentView({
   const [isFormValid, setIsFormValid] = useState(true);
 
   useEffect(() => {
-    setIsFormValid(viewType === "website" ? false : true);
+    setIsFormValid(viewType === "website" || viewType === "pdf" ? false : true);
   }, [viewType]);
 
   const handleWebsiteValidityChange = useCallback((valid: boolean) => {
+    setIsFormValid(valid);
+  }, []);
+
+  const handlePdfValidityChange = useCallback((valid: boolean) => {
     setIsFormValid(valid);
   }, []);
 
@@ -44,7 +48,12 @@ export function AddContentView({
         disabled: !isFormValid,
       }}
     >
-      {viewType === "pdf" && <PDFContent />}
+      {viewType === "pdf" && (
+        <PDFContent
+          onValidityChange={handlePdfValidityChange}
+          onQrValueChange={onQrValueChange}
+        />
+      )}
       {viewType === "links" && <ListOfLinksContent />}
       {viewType === "vcard" && <VCardContent />}
       {viewType === "business" && <BusinessContent />}

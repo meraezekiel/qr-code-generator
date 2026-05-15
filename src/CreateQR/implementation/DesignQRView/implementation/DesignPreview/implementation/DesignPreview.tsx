@@ -3,8 +3,8 @@ import Lottie from "lottie-react";
 import { PreviewContent } from "../../../../PhonePreview/implementation/PreviewContent";
 import { DesignPreviewProps } from "./DesignPreviewProps";
 import { useDesignPreviewHandler } from "./useDesignPreviewHandler";
+import { Frame } from "../../Frame";
 import { QRCodeArtwork } from "./QRCodeArtwork";
-import { QRFrame } from "./QRFrame";
 
 export function DesignPreview({
   design,
@@ -90,9 +90,9 @@ export function DesignPreview({
                       isGeneratingQr ? "opacity-15" : "opacity-100",
                     ].join(" ")}
                   >
-                    <QRFrame frameStyle={design.frameStyle}>
+                    <Frame frameId={design.frameStyle}>
                       <QRCodeArtwork design={design} value={qrValue} />
-                    </QRFrame>
+                    </Frame>
                   </div>
                   {isGeneratingQr && (
                     <div
