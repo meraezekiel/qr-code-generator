@@ -1,0 +1,219 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e12]:
+          - text: Online
+          - emphasis [ref=e13]: QR
+      - tablist "Steps" [ref=e14]:
+        - tab "01 Compose" [selected] [ref=e728] [cursor=pointer]:
+          - generic [ref=e16]: "01"
+          - generic [ref=e17]: Compose
+        - tab "02 Style" [ref=e729] [cursor=pointer]:
+          - generic [ref=e19]: "02"
+          - generic [ref=e20]: Style
+        - tab "03 Get" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: "03"
+          - generic [ref=e23]: Get
+      - generic [ref=e24]:
+        - button "Help" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - text: Help
+        - button "Sign in" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+          - text: Sign in
+    - generic [ref=e33]:
+      - generic [ref=e730]:
+        - generic [ref=e731]:
+          - generic [ref=e732]:
+            - generic [ref=e733]: Step 01
+            - text: · Compose
+          - heading "Make a QR worth scanning." [level=1] [ref=e734]:
+            - text: Make a QR
+            - emphasis [ref=e735]: worth scanning.
+          - paragraph [ref=e736]: Pick what your code should do, then fill in the details on the right. The preview updates live, so what you see is exactly what scanners get.
+        - generic [ref=e737]:
+          - generic [ref=e738]: Types available
+          - generic [ref=e739]:
+            - text: "16"
+            - generic [ref=e740]: / kinds
+      - generic [ref=e741]:
+        - generic [ref=e742]:
+          - generic [ref=e743]:
+            - generic [ref=e744]:
+              - emphasis [ref=e745]: Pick
+              - text: a type
+            - generic [ref=e746]: 16 kinds
+          - generic [ref=e747]:
+            - generic [ref=e748]:
+              - img [ref=e749]
+              - textbox "Search — vCard, WiFi, menu…" [ref=e752]
+              - generic [ref=e753]: ⌘ K
+            - generic [ref=e754]:
+              - button "All" [ref=e755] [cursor=pointer]
+              - button "Content" [ref=e756] [cursor=pointer]
+              - button "Business" [ref=e757] [cursor=pointer]
+              - button "Social" [ref=e758] [cursor=pointer]
+              - button "Connect" [ref=e759] [cursor=pointer]
+            - generic [ref=e760]:
+              - button "Website Link to any URL" [ref=e761] [cursor=pointer]:
+                - img [ref=e763]
+                - generic [ref=e766]:
+                  - generic [ref=e767]: Website
+                  - generic [ref=e768]: Link to any URL
+                - img [ref=e770]
+              - button "PDF Show a PDF" [ref=e772] [cursor=pointer]:
+                - img [ref=e774]
+                - generic [ref=e777]:
+                  - generic [ref=e778]: PDF
+                  - generic [ref=e779]: Show a PDF
+                - img [ref=e781]
+              - button "Links Bundle of links" [ref=e783] [cursor=pointer]:
+                - img [ref=e785]
+                - generic [ref=e788]:
+                  - generic [ref=e789]: Links
+                  - generic [ref=e790]: Bundle of links
+                - img [ref=e792]
+              - button "Video Show a video" [ref=e794] [cursor=pointer]:
+                - img [ref=e796]
+                - generic [ref=e799]:
+                  - generic [ref=e800]: Video
+                  - generic [ref=e801]: Show a video
+                - img [ref=e803]
+              - button "Images A gallery" [ref=e805] [cursor=pointer]:
+                - img [ref=e807]
+                - generic [ref=e811]:
+                  - generic [ref=e812]: Images
+                  - generic [ref=e813]: A gallery
+                - img [ref=e815]
+              - button "Audio Share an MP3" [ref=e817] [cursor=pointer]:
+                - img [ref=e819]
+                - generic [ref=e823]:
+                  - generic [ref=e824]: Audio
+                  - generic [ref=e825]: Share an MP3
+                - img [ref=e827]
+              - button "vCard Digital business card" [ref=e829] [cursor=pointer]:
+                - img [ref=e831]
+                - generic [ref=e835]:
+                  - generic [ref=e836]: vCard
+                  - generic [ref=e837]: Digital business card
+                - img [ref=e839]
+              - button "Business Storefront page" [ref=e841] [cursor=pointer]:
+                - img [ref=e843]
+                - generic [ref=e846]:
+                  - generic [ref=e847]: Business
+                  - generic [ref=e848]: Storefront page
+                - img [ref=e850]
+              - button "Menu Restaurant menu" [ref=e852] [cursor=pointer]:
+                - img [ref=e854]
+                - generic [ref=e857]:
+                  - generic [ref=e858]: Menu
+                  - generic [ref=e859]: Restaurant menu
+                - img [ref=e861]
+              - button "Coupon Promo offer" [ref=e863] [cursor=pointer]:
+                - img [ref=e865]
+                - generic [ref=e867]:
+                  - generic [ref=e868]: Coupon
+                  - generic [ref=e869]: Promo offer
+                - img [ref=e871]
+              - button "App Redirect to store" [ref=e873] [cursor=pointer]:
+                - img [ref=e875]
+                - generic [ref=e877]:
+                  - generic [ref=e878]: App
+                  - generic [ref=e879]: Redirect to store
+                - img [ref=e881]
+              - button "Instagram Share your handle" [ref=e883] [cursor=pointer]:
+                - img [ref=e885]
+                - generic [ref=e888]:
+                  - generic [ref=e889]: Instagram
+                  - generic [ref=e890]: Share your handle
+                - img [ref=e892]
+              - button "Facebook Page link" [ref=e894] [cursor=pointer]:
+                - img [ref=e896]
+                - generic [ref=e898]:
+                  - generic [ref=e899]: Facebook
+                  - generic [ref=e900]: Page link
+                - img [ref=e902]
+              - button "WhatsApp Direct chat" [ref=e904] [cursor=pointer]:
+                - img [ref=e906]
+                - generic [ref=e908]:
+                  - generic [ref=e909]: WhatsApp
+                  - generic [ref=e910]: Direct chat
+                - img [ref=e912]
+              - button "All social Every platform" [ref=e914] [cursor=pointer]:
+                - img [ref=e916]
+                - generic [ref=e922]:
+                  - generic [ref=e923]: All social
+                  - generic [ref=e924]: Every platform
+                - img [ref=e926]
+              - button "WiFi Network credentials" [active] [ref=e928] [cursor=pointer]:
+                - img [ref=e930]
+                - generic [ref=e934]:
+                  - generic [ref=e935]: WiFi
+                  - generic [ref=e936]: Network credentials
+                - img [ref=e938]
+        - generic [ref=e940]:
+          - generic [ref=e941]:
+            - generic [ref=e942]:
+              - text: The
+              - emphasis [ref=e943]: content
+            - generic [ref=e944]: WiFi
+          - generic [ref=e946]:
+            - generic [ref=e1010]:
+              - generic [ref=e1011]:
+                - text: Network name (SSID)
+                - generic [ref=e1012]: required
+              - textbox "Network name (SSID) required" [ref=e1013]:
+                - /placeholder: YourBrand_WiFi
+            - generic [ref=e1014]:
+              - generic [ref=e1015]:
+                - text: Password
+                - generic [ref=e1016]: optional
+              - textbox "Password optional" [ref=e1017]:
+                - /placeholder: ••••••••
+            - generic [ref=e1018]:
+              - generic [ref=e1019]:
+                - text: Security
+                - generic [ref=e1020]: optional
+              - combobox "Security optional" [ref=e1021]:
+                - option "WPA2" [selected]
+                - option "WPA"
+                - option "WEP"
+                - option "None"
+            - generic [ref=e967]: Dynamic codes — you can edit this content any time without reprinting.
+        - generic [ref=e968]:
+          - generic [ref=e1027]:
+            - generic [ref=e1029]:
+              - generic [ref=e1030]: 9:41
+              - generic [ref=e1031]:
+                - img [ref=e1032]
+                - img [ref=e1033]
+                - img [ref=e1037]
+            - generic [ref=e1040]:
+              - generic [ref=e1041]:
+                - img [ref=e1043]
+                - heading "Connect to WiFi" [level=5] [ref=e1047]
+                - paragraph [ref=e1048]: Scan to join instantly
+              - generic [ref=e1049]:
+                - generic [ref=e1050]:
+                  - generic [ref=e1051]: Network
+                  - generic [ref=e1052]: YourBrand_WiFi
+                - generic [ref=e1053]:
+                  - generic [ref=e1054]: Password
+                  - generic [ref=e1055]: ••••••••
+                - generic [ref=e1056]:
+                  - generic [ref=e1057]: Security
+                  - generic [ref=e1058]: WPA2
+              - generic [ref=e1059]: Connect
+          - generic [ref=e1003]: Live · iPhone 15
+    - generic [ref=e439]:
+      - generic [ref=e441]: 01 / 03 · Compose
+      - generic [ref=e442]:
+        - generic [ref=e443]: Compose
+        - generic [ref=e446]: Style
+        - generic [ref=e449]: Get
+      - button "Continue" [ref=e1007] [cursor=pointer]:
+        - text: Continue
+        - img [ref=e1008]
+  - region "Notifications alt+T"

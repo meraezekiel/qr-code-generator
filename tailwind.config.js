@@ -4,37 +4,51 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          DEFAULT: "#22c55e",
-          dark: "#16a34a",
-          light: "#86efac",
-          subtle: "#f0fdf4",
-        },
+        cream: "#f5f1e8",
+        "cream-deep": "#ede7d6",
+        paper: "#fbf8f0",
+        ink: "#1a1817",
+        "ink-soft": "#3a342f",
+        muted: "#8a8478",
+        "muted-deep": "#5c574e",
+        hairline: "#e2dac5",
+        "hairline-dim": "#ebe4d1",
+        forest: "#1b5e3a",
+        "forest-deep": "#134529",
+        "forest-soft": "#e7efe8",
+        lime: "#dffc60",
+        "lime-deep": "#b8e235",
+        clay: "#c8542a",
+        sun: "#f0b429",
       },
       fontFamily: {
+        serif: [
+          "Instrument Serif",
+          "Cormorant Garamond",
+          "Times New Roman",
+          "Georgia",
+          "serif",
+        ],
         sans: [
+          "Manrope",
+          "Geist",
           "ui-sans-serif",
           "system-ui",
           "-apple-system",
           "Segoe UI",
-          "Roboto",
           "sans-serif",
         ],
+        mono: [
+          "JetBrains Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "monospace",
+        ],
       },
-      keyframes: {
-        "phone-fade": {
-          "0%": { opacity: "0", transform: "translateY(6px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "qr-scan": {
-          "0%": { transform: "translateY(0%)" },
-          "50%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(0%)" },
-        },
-      },
-      animation: {
-        "phone-fade": "phone-fade 220ms ease-out",
-        "qr-scan": "qr-scan 1.6s ease-in-out infinite",
+      borderRadius: {
+        pill: "9999px",
       },
     },
   },

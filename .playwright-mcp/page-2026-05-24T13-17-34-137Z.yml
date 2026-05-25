@@ -1,0 +1,225 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e12]:
+          - text: Online
+          - emphasis [ref=e13]: QR
+      - tablist "Steps" [ref=e14]:
+        - tab "01 Compose" [selected] [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: "01"
+          - generic [ref=e17]: Compose
+        - tab "02 Style" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: "02"
+          - generic [ref=e20]: Style
+        - tab "03 Get" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: "03"
+          - generic [ref=e23]: Get
+      - generic [ref=e24]:
+        - button "Help" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - text: Help
+        - button "Sign in" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+          - text: Sign in
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]: Step 01
+            - text: · Compose
+          - heading "Make a QR worth scanning." [level=1] [ref=e38]:
+            - text: Make a QR
+            - emphasis [ref=e39]: worth scanning.
+          - paragraph [ref=e40]: Pick what your code should do, then fill in the details on the right. The preview updates live, so what you see is exactly what scanners get.
+        - generic [ref=e41]:
+          - generic [ref=e42]: Types available
+          - generic [ref=e43]:
+            - text: "16"
+            - generic [ref=e44]: / kinds
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - emphasis [ref=e49]: Pick
+              - text: a type
+            - generic [ref=e50]: 16 kinds
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - img [ref=e53]
+              - textbox "Search — vCard, WiFi, menu…" [ref=e56]
+              - generic [ref=e57]: ⌘ K
+            - generic [ref=e58]:
+              - button "All" [ref=e59] [cursor=pointer]
+              - button "Content" [ref=e60] [cursor=pointer]
+              - button "Business" [ref=e61] [cursor=pointer]
+              - button "Social" [ref=e62] [cursor=pointer]
+              - button "Connect" [ref=e63] [cursor=pointer]
+            - generic [ref=e64]:
+              - button "Website Link to any URL" [ref=e65] [cursor=pointer]:
+                - img [ref=e67]
+                - generic [ref=e70]:
+                  - generic [ref=e71]: Website
+                  - generic [ref=e72]: Link to any URL
+                - img [ref=e74]
+              - button "PDF Show a PDF" [ref=e76] [cursor=pointer]:
+                - img [ref=e78]
+                - generic [ref=e81]:
+                  - generic [ref=e82]: PDF
+                  - generic [ref=e83]: Show a PDF
+                - img [ref=e85]
+              - button "Links Bundle of links" [ref=e87] [cursor=pointer]:
+                - img [ref=e89]
+                - generic [ref=e92]:
+                  - generic [ref=e93]: Links
+                  - generic [ref=e94]: Bundle of links
+                - img [ref=e96]
+              - button "Video Show a video" [ref=e98] [cursor=pointer]:
+                - img [ref=e100]
+                - generic [ref=e103]:
+                  - generic [ref=e104]: Video
+                  - generic [ref=e105]: Show a video
+                - img [ref=e107]
+              - button "Images A gallery" [ref=e109] [cursor=pointer]:
+                - img [ref=e111]
+                - generic [ref=e115]:
+                  - generic [ref=e116]: Images
+                  - generic [ref=e117]: A gallery
+                - img [ref=e119]
+              - button "Audio Share an MP3" [ref=e121] [cursor=pointer]:
+                - img [ref=e123]
+                - generic [ref=e127]:
+                  - generic [ref=e128]: Audio
+                  - generic [ref=e129]: Share an MP3
+                - img [ref=e131]
+              - button "vCard Digital business card" [active] [ref=e133] [cursor=pointer]:
+                - img [ref=e135]
+                - generic [ref=e139]:
+                  - generic [ref=e140]: vCard
+                  - generic [ref=e141]: Digital business card
+                - img [ref=e143]
+              - button "Business Storefront page" [ref=e145] [cursor=pointer]:
+                - img [ref=e147]
+                - generic [ref=e150]:
+                  - generic [ref=e151]: Business
+                  - generic [ref=e152]: Storefront page
+                - img [ref=e154]
+              - button "Menu Restaurant menu" [ref=e156] [cursor=pointer]:
+                - img [ref=e158]
+                - generic [ref=e161]:
+                  - generic [ref=e162]: Menu
+                  - generic [ref=e163]: Restaurant menu
+                - img [ref=e165]
+              - button "Coupon Promo offer" [ref=e167] [cursor=pointer]:
+                - img [ref=e169]
+                - generic [ref=e171]:
+                  - generic [ref=e172]: Coupon
+                  - generic [ref=e173]: Promo offer
+                - img [ref=e175]
+              - button "App Redirect to store" [ref=e177] [cursor=pointer]:
+                - img [ref=e179]
+                - generic [ref=e181]:
+                  - generic [ref=e182]: App
+                  - generic [ref=e183]: Redirect to store
+                - img [ref=e185]
+              - button "Instagram Share your handle" [ref=e187] [cursor=pointer]:
+                - img [ref=e189]
+                - generic [ref=e192]:
+                  - generic [ref=e193]: Instagram
+                  - generic [ref=e194]: Share your handle
+                - img [ref=e196]
+              - button "Facebook Page link" [ref=e198] [cursor=pointer]:
+                - img [ref=e200]
+                - generic [ref=e202]:
+                  - generic [ref=e203]: Facebook
+                  - generic [ref=e204]: Page link
+                - img [ref=e206]
+              - button "WhatsApp Direct chat" [ref=e208] [cursor=pointer]:
+                - img [ref=e210]
+                - generic [ref=e212]:
+                  - generic [ref=e213]: WhatsApp
+                  - generic [ref=e214]: Direct chat
+                - img [ref=e216]
+              - button "All social Every platform" [ref=e218] [cursor=pointer]:
+                - img [ref=e220]
+                - generic [ref=e226]:
+                  - generic [ref=e227]: All social
+                  - generic [ref=e228]: Every platform
+                - img [ref=e230]
+              - button "WiFi Network credentials" [ref=e232] [cursor=pointer]:
+                - img [ref=e234]
+                - generic [ref=e238]:
+                  - generic [ref=e239]: WiFi
+                  - generic [ref=e240]: Network credentials
+                - img [ref=e242]
+        - generic [ref=e244]:
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - text: The
+              - emphasis [ref=e247]: content
+            - generic [ref=e248]: vCard
+          - generic [ref=e250]:
+            - generic [ref=e455]:
+              - generic [ref=e456]:
+                - text: Full name
+                - generic [ref=e457]: required
+              - textbox "Full name required" [ref=e458]:
+                - /placeholder: Alex Morgan
+            - generic [ref=e459]:
+              - generic [ref=e460]:
+                - text: Title
+                - generic [ref=e461]: optional
+              - textbox "Title optional" [ref=e462]:
+                - /placeholder: Product Designer
+            - generic [ref=e463]:
+              - generic [ref=e464]:
+                - text: Email
+                - generic [ref=e465]: optional
+              - textbox "Email optional" [ref=e466]:
+                - /placeholder: alex@company.com
+            - generic [ref=e467]:
+              - generic [ref=e468]:
+                - text: Phone
+                - generic [ref=e469]: optional
+              - textbox "Phone optional" [ref=e470]:
+                - /placeholder: +1 555 123 4567
+            - generic [ref=e471]:
+              - generic [ref=e472]:
+                - text: Website
+                - generic [ref=e473]: optional
+              - textbox "Website optional" [ref=e474]:
+                - /placeholder: alexmorgan.design
+            - generic [ref=e475]: Dynamic codes — you can edit this content any time without reprinting.
+        - generic [ref=e260]:
+          - generic [ref=e481]:
+            - generic [ref=e483]:
+              - generic [ref=e484]: 9:41
+              - generic [ref=e485]:
+                - img [ref=e486]
+                - img [ref=e487]
+                - img [ref=e491]
+            - generic [ref=e494]:
+              - generic [ref=e496]: YN
+              - generic [ref=e497]:
+                - generic [ref=e498]: Your Name
+                - generic [ref=e499]: Your title
+              - generic [ref=e500]:
+                - generic [ref=e501]:
+                  - img [ref=e502]
+                  - generic [ref=e505]: —
+                - generic [ref=e506]:
+                  - img [ref=e507]
+                  - generic [ref=e509]: —
+              - button "Save to contacts" [ref=e511] [cursor=pointer]
+          - generic [ref=e437]: Live · iPhone 15
+    - generic [ref=e439]:
+      - generic [ref=e441]: 01 / 03 · Compose
+      - generic [ref=e442]:
+        - generic [ref=e443]: Compose
+        - generic [ref=e446]: Style
+        - generic [ref=e449]: Get
+      - button "Continue" [ref=e452] [cursor=pointer]:
+        - text: Continue
+        - img [ref=e453]
+  - region "Notifications alt+T"

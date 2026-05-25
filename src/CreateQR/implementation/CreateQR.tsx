@@ -1,163 +1,79 @@
-import { StepperHeader } from "./StepperHeader";
-import { QRTypeGrid } from "./QRTypeGrid";
-import { PhonePreview } from "./PhonePreview";
-import { SimpleSteps } from "./SimpleSteps";
-import { AdvancedFeatures } from "./AdvancedFeatures";
-import { DesignFAQ } from "./DesignFAQ";
-import { ScanFAQ } from "./ScanFAQ";
-import { CTABanner } from "./CTABanner";
-import { SiteFooter } from "./SiteFooter";
-import { AddContentView } from "./AddContentView";
-import { DesignQRView } from "./DesignQRView";
-import { DownloadQRView } from "./DownloadQRView";
-import { MenuTypeModal } from "./MenuTypeModal";
+import { toast } from "sonner";
+import { ActionBar } from "./ActionBar";
+import { StepCompose } from "./StepCompose";
+import { StepGet } from "./StepGet";
+import { StepStyle } from "./StepStyle";
+import { TopNav } from "./TopNav";
 import { useCreateQRHandler } from "./useCreateQRHandler";
+import { renderQrPng } from "../../lib/renderQrPng";
 
 export function CreateQR() {
   const {
-    selectedType,
-    activeType,
-    currentStep,
-    menuSubType,
-    isMenuModalOpen,
+    state,
+    set,
+    setContent,
+    setStyle,
+    selectType,
+    goTo,
+    canAdvance,
     qrValue,
-    setQrValue,
-    designHandler,
-    onSelectType,
-    onHoverType,
-    onLeaveType,
-    selectMenuSubType,
-    closeMenuModal,
-    goToStep1,
-    goToStep2,
-    goToStep3,
-    goToStep4,
+    currentType,
   } = useCreateQRHandler();
 
-  const isStep1 = currentStep === 1;
+  const onDownload = async (format: "png" | "svg" | "pdf" | "eps" = "png") => {
+    if (format !== "png") {
+      toast.info(`${format.toUpperCase()} export is coming soon`);
+      return;
+    }
+    try {
+      const blob = await renderQrPng(qrValue, state.style);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `qr-${Date.now()}.png`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      toast.success("QR downloaded", { description: "Saved to your downloads." });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Failed to render QR";
+      toast.error("Download failed", { description: msg });
+    }
+  };
 
   return (
-    <div
-      className={[
-        "bg-slate-50 flex flex-col",
-        isStep1 ? "min-h-screen" : "h-screen overflow-hidden",
-      ].join(" ")}
-    >
-      <StepperHeader activeStep={currentStep} />
-
-      <main
-        className={
-          isStep1
-            ? "flex-1 w-full max-w-[1400px] mx-auto px-6 pt-8 pb-16"
-            : "flex-1 w-full overflow-hidden flex flex-col"
-        }
-      >
-        {currentStep === 1 && (
-          <>
-            <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-10">
-              <span className="text-brand">Easily create a QR code</span>{" "}
-              <span className="text-slate-900">for any occasion in seconds!</span>
-            </h1>
-
-            <div className="grid grid-cols-1 lg:grid-cols-[180px_minmax(0,1fr)_340px] gap-8 items-start">
-              <aside className="hidden lg:flex flex-col items-center pt-20">
-                <svg
-                  width="150"
-                  height="170"
-                  viewBox="0 0 150 170"
-                  fill="none"
-                  className="text-brand -mb-2"
-                  aria-hidden
-                >
-                  <path
-                    d="M20 10 C 120 10, 140 80, 90 140"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    fill="none"
-                  />
-                  <path
-                    d="M82 130 L 90 142 L 102 134"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
-                <div className="border border-brand/40 rounded-2xl px-5 py-3 text-slate-700 font-medium text-center shadow-sm bg-white">
-                  Choose a
-                  <br />
-                  QR Type
-                </div>
-              </aside>
-
-              <QRTypeGrid
-                selectedType={selectedType}
-                onSelectType={onSelectType}
-                onHoverType={onHoverType}
-                onLeaveType={onLeaveType}
-              />
-
-              <div className="flex justify-center lg:justify-end">
-                <PhonePreview activeType={activeType} />
-              </div>
-            </div>
-          </>
-        )}
-
-        {currentStep === 2 && (
-          <AddContentView
-            selectedType={selectedType}
-            menuSubType={menuSubType}
-            onQrValueChange={setQrValue}
-            onBack={goToStep1}
-            onNext={goToStep3}
+    <div className="atl-shell">
+      <TopNav step={state.step} goTo={goTo} />
+      <div>
+        {state.step === 0 && (
+          <StepCompose
+            state={state}
+            currentType={currentType}
+            onSelectType={selectType}
+            onContentChange={setContent}
+            onQueryChange={(q) => set({ query: q })}
+            onCategoryChange={(c) => set({ category: c })}
           />
         )}
-
-        {currentStep === 3 && (
-          <DesignQRView
-            selectedType={selectedType}
+        {state.step === 1 && (
+          <StepStyle
+            style={state.style}
             qrValue={qrValue}
-            designHandler={designHandler}
-            onBack={goToStep2}
-            onCreate={goToStep4}
+            currentType={currentType}
+            onStyleChange={setStyle}
           />
         )}
-
-        {currentStep === 4 && (
-          <DownloadQRView
-            selectedType={selectedType}
-            qrValue={qrValue}
-            design={designHandler.design}
-            onBack={goToStep3}
-          />
+        {state.step === 2 && (
+          <StepGet style={state.style} qrValue={qrValue} onDownload={onDownload} />
         )}
-      </main>
-
-      {isMenuModalOpen && (
-        <MenuTypeModal
-          onSelect={selectMenuSubType}
-          onClose={closeMenuModal}
-        />
-      )}
-
-      {currentStep === 1 && (
-        <>
-          <SimpleSteps />
-
-          <AdvancedFeatures />
-
-          <DesignFAQ />
-
-          <ScanFAQ />
-
-          <CTABanner />
-
-          <SiteFooter />
-        </>
-      )}
+      </div>
+      <ActionBar
+        step={state.step}
+        goTo={goTo}
+        canAdvance={canAdvance}
+        onDownload={() => onDownload("png")}
+      />
     </div>
   );
 }
