@@ -8,6 +8,7 @@ import { TypePicker } from "./TypePicker";
 export function StepCompose({
   state,
   currentType,
+  fieldErrors,
   onSelectType,
   onContentChange,
   onQueryChange,
@@ -52,6 +53,7 @@ export function StepCompose({
         <ContentForm
           type={currentType}
           content={state.content}
+          fieldErrors={fieldErrors}
           onContentChange={onContentChange}
         />
 

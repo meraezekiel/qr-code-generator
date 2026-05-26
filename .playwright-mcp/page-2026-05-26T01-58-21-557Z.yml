@@ -1,0 +1,100 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e12]:
+          - text: Online
+          - emphasis [ref=e13]: QR
+      - tablist "Steps" [ref=e14]:
+        - tab "Compose" [ref=e499] [cursor=pointer]:
+          - img [ref=e500]
+          - generic [ref=e17]: Compose
+        - tab "Style" [ref=e609] [cursor=pointer]:
+          - img [ref=e610]
+          - generic [ref=e20]: Style
+        - tab "03 Get" [selected] [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: "03"
+          - generic [ref=e23]: Get
+      - generic [ref=e24]:
+        - button "Help" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - text: Help
+        - button "Sign in" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+          - text: Sign in
+    - generic [ref=e612]:
+      - generic [ref=e613]:
+        - generic [ref=e614]:
+          - generic [ref=e615]: Step 03
+          - text: · Ship it
+        - heading "Your QR is ready." [level=2] [ref=e616]:
+          - text: Your QR is
+          - emphasis [ref=e617]: ready.
+        - paragraph [ref=e618]: Download in the format that fits your medium. Dynamic — so the destination stays editable.
+        - img "QR code" [ref=e626]:
+          - img [ref=e627]
+        - generic [ref=e636]: Scan me
+        - radiogroup "Download format" [ref=e637]:
+          - radio "PNG 2048px" [ref=e638] [cursor=pointer]:
+            - generic [ref=e639]: PNG
+            - generic [ref=e640]: 2048px
+          - radio "SVG vector" [ref=e641] [cursor=pointer]:
+            - generic [ref=e642]: SVG
+            - generic [ref=e643]: vector
+          - radio "PDF print" [checked] [active] [ref=e644] [cursor=pointer]:
+            - generic [ref=e645]: PDF
+            - generic [ref=e646]: print
+          - radio "EPS vector" [ref=e647] [cursor=pointer]:
+            - generic [ref=e648]: EPS
+            - generic [ref=e649]: vector
+      - generic [ref=e650]:
+        - generic [ref=e651]:
+          - text: Or,
+          - emphasis [ref=e652]: send
+          - text: it elsewhere.
+        - generic [ref=e653]: We'll attach it where you need.
+        - generic [ref=e654]:
+          - button "Email it" [ref=e655] [cursor=pointer]:
+            - img [ref=e656]
+            - text: Email it
+          - button "Text it" [ref=e659] [cursor=pointer]:
+            - img [ref=e660]
+            - text: Text it
+          - button "Copy link" [ref=e662] [cursor=pointer]:
+            - img [ref=e663]
+            - text: Copy link
+          - button "Print it" [ref=e666] [cursor=pointer]:
+            - img [ref=e667]
+            - text: Print it
+        - list [ref=e671]:
+          - listitem [ref=e672]:
+            - img [ref=e673]
+            - text: Edit destination any time — no reprint
+          - listitem [ref=e675]:
+            - img [ref=e676]
+            - text: Track scans, locations, devices
+          - listitem [ref=e678]:
+            - img [ref=e679]
+            - text: Unlimited codes on the free plan
+          - listitem [ref=e681]:
+            - img [ref=e682]
+            - text: High-res for print and digital
+    - generic [ref=e439]:
+      - generic [ref=e440]:
+        - button "Back" [ref=e604] [cursor=pointer]:
+          - img [ref=e605]
+          - text: Back
+        - generic [ref=e441]: 03 / 03 · Get
+      - generic [ref=e442]:
+        - generic [ref=e443]:
+          - img [ref=e607]
+          - text: Compose
+        - generic [ref=e446]:
+          - img [ref=e684]
+          - text: Style
+        - generic [ref=e449]: Get
+      - button "Download PDF" [ref=e690] [cursor=pointer]:
+        - img [ref=e687]
+        - text: Download PDF
+  - region "Notifications alt+T"

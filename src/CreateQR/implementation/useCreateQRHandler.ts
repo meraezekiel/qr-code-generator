@@ -19,6 +19,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { toast } from "sonner";
+import { validateUrl } from "../../lib/validateUrl";
 
 export type StepIdx = 0 | 1 | 2;
 
@@ -27,8 +28,10 @@ export type CategoryId = "all" | "content" | "business" | "social" | "connect";
 export type ShapeId = "square" | "dot" | "soft" | "lines";
 export type CornerId = "square" | "rounded" | "circle";
 export type PaletteId = "forest" | "ink" | "lime" | "cream" | "clay" | "navy";
+export type QrFormat = "png" | "svg" | "pdf" | "eps";
 
 export type FieldKind = "text" | "textarea" | "select" | "file";
+export type FieldValidate = "url";
 export type FieldDef = {
   k: string;
   lbl: string;
@@ -37,6 +40,7 @@ export type FieldDef = {
   options?: string[];
   required?: boolean;
   accept?: string;
+  validate?: FieldValidate;
 };
 
 export type QRTypeInfo = {
@@ -62,6 +66,7 @@ export type CreateQRState = {
   query: string;
   category: CategoryId;
   style: StyleState;
+  format: QrFormat;
 };
 
 export const PRESET_PALETTES: Array<{ id: PaletteId; fg: string; bg: string }> = [
@@ -108,7 +113,7 @@ const TYPE_BY_ID: Record<string, QRTypeInfo> = Object.fromEntries(
 );
 
 export const FIELDS_BY_TYPE: Record<string, FieldDef[]> = {
-  website: [{ k: "url", lbl: "Destination URL", placeholder: "https://yourbrand.com", required: true }],
+  website: [{ k: "url", lbl: "Destination URL", placeholder: "https://yourbrand.com", required: true, validate: "url" }],
   pdf: [{ k: "file", lbl: "PDF file", kind: "file", accept: "application/pdf", required: true }],
   links: [
     { k: "displayName", lbl: "Display name", placeholder: "Your name or brand" },
@@ -134,17 +139,17 @@ export const FIELDS_BY_TYPE: Record<string, FieldDef[]> = {
   ],
   apps: [
     { k: "name", lbl: "App name", placeholder: "YourApp", required: true },
-    { k: "ios", lbl: "App Store link", placeholder: "https://apps.apple.com/..." },
-    { k: "android", lbl: "Play Store link", placeholder: "https://play.google.com/..." },
+    { k: "ios", lbl: "App Store link", placeholder: "https://apps.apple.com/...", validate: "url" },
+    { k: "android", lbl: "Play Store link", placeholder: "https://play.google.com/...", validate: "url" },
   ],
   instagram: [{ k: "handle", lbl: "Instagram handle", placeholder: "@yourbrand", required: true }],
-  facebook: [{ k: "page", lbl: "Facebook page URL", placeholder: "https://facebook.com/yourpage", required: true }],
+  facebook: [{ k: "page", lbl: "Facebook page URL", placeholder: "https://facebook.com/yourpage", required: true, validate: "url" }],
   whatsapp: [
     { k: "number", lbl: "WhatsApp number", placeholder: "+1 555 0100", required: true },
     { k: "greeting", lbl: "Pre-filled message", placeholder: "Hi! I’d like to place an order", kind: "textarea" },
   ],
   "social-media": [{ k: "handle", lbl: "Display name", placeholder: "Your brand", required: true }],
-  video: [{ k: "url", lbl: "Video URL", placeholder: "https://youtube.com/watch?v=…", required: true }],
+  video: [{ k: "url", lbl: "Video URL", placeholder: "https://youtube.com/watch?v=…", required: true, validate: "url" }],
   images: [{ k: "caption", lbl: "Gallery title", placeholder: "My portfolio", required: true }],
   mp3: [
     { k: "title", lbl: "Track title", placeholder: "Summer Vibes", required: true },
@@ -170,6 +175,7 @@ const INITIAL: CreateQRState = {
     caption: "Scan me",
     logoDataUrl: null,
   },
+  format: "png",
 };
 
 function buildQrValue(typeId: string | null, content: Record<string, string>): string {
@@ -178,6 +184,8 @@ function buildQrValue(typeId: string | null, content: Record<string, string>): s
   switch (typeId) {
     case "website":
       return v("url") || "https://yourbrand.com";
+    case "pdf":
+      return v("file") || "https://yourbrand.com";
     case "vcard": {
       const lines = [
         "BEGIN:VCARD",
@@ -230,6 +238,8 @@ export function useCreateQRHandler() {
     setState((s) => ({ ...s, content: { ...s.content, [key]: value } }));
   const setStyle = (patch: Partial<StyleState>) =>
     setState((s) => ({ ...s, style: { ...s.style, ...patch } }));
+  const setFormat = (format: QrFormat) =>
+    setState((s) => (s.format === format ? s : { ...s, format }));
   const selectType = (id: string) =>
     setState((s) => (s.typeId === id ? s : { ...s, typeId: id, content: {} }));
 
@@ -238,7 +248,32 @@ export function useCreateQRHandler() {
     setState((s) => ({ ...s, step: next }));
   };
 
-  const canAdvance = state.step === 0 ? !!state.typeId : true;
+  const fieldErrors = useMemo(() => {
+    if (!state.typeId) return {} as Record<string, string>;
+    const fields = FIELDS_BY_TYPE[state.typeId] || [];
+    const errs: Record<string, string> = {};
+    for (const f of fields) {
+      const val = (state.content[f.k] || "").trim();
+      if (f.validate === "url") {
+        const msg = validateUrl(val);
+        if (msg) errs[f.k] = msg;
+      }
+    }
+    return errs;
+  }, [state.typeId, state.content]);
+
+  const requiredFilled = useMemo(() => {
+    if (!state.typeId) return false;
+    const fields = FIELDS_BY_TYPE[state.typeId] || [];
+    return fields.every(
+      (f) => !f.required || !!(state.content[f.k] || "").trim()
+    );
+  }, [state.typeId, state.content]);
+
+  const canAdvance =
+    state.step === 0
+      ? !!state.typeId && requiredFilled && Object.keys(fieldErrors).length === 0
+      : true;
 
   const qrValue = useMemo(
     () => buildQrValue(state.typeId, state.content),
@@ -258,12 +293,14 @@ export function useCreateQRHandler() {
     set,
     setContent,
     setStyle,
+    setFormat,
     selectType,
     goTo,
     canAdvance,
     qrValue,
     currentType,
     currentFields,
+    fieldErrors,
     reset,
   };
 }

@@ -1,0 +1,108 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e12]:
+          - text: Online
+          - emphasis [ref=e13]: QR
+      - tablist "Steps" [ref=e14]:
+        - tab "Compose" [ref=e499] [cursor=pointer]:
+          - img [ref=e500]
+          - generic [ref=e17]: Compose
+        - tab "02 Style" [selected] [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: "02"
+          - generic [ref=e20]: Style
+        - tab "03 Get" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: "03"
+          - generic [ref=e23]: Get
+      - generic [ref=e24]:
+        - button "Help" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - text: Help
+        - button "Sign in" [ref=e29] [cursor=pointer]:
+          - img [ref=e30]
+          - text: Sign in
+    - generic [ref=e502]:
+      - generic [ref=e503]:
+        - generic [ref=e504]:
+          - generic [ref=e505]:
+            - generic [ref=e506]:
+              - text: Color
+              - emphasis [ref=e507]: palette
+            - generic [ref=e508]: Pattern · BG
+          - generic [ref=e509]:
+            - button "Palette forest" [ref=e510] [cursor=pointer]
+            - button "Palette ink" [ref=e511] [cursor=pointer]
+            - button "Palette lime" [ref=e512] [cursor=pointer]
+            - button "Palette cream" [ref=e513] [cursor=pointer]
+            - button "Palette clay" [ref=e514] [cursor=pointer]
+            - button "Palette navy" [ref=e515] [cursor=pointer]
+        - generic [ref=e516]:
+          - generic [ref=e517]:
+            - generic [ref=e518]:
+              - text: Pattern
+              - emphasis [ref=e519]: shape
+            - generic [ref=e520]: Dot · Square · Soft
+          - generic [ref=e521]:
+            - button "Shape square" [ref=e522] [cursor=pointer]:
+              - img [ref=e523]
+            - button "Shape dot" [ref=e528] [cursor=pointer]:
+              - img [ref=e529]
+            - button "Shape soft" [ref=e534] [cursor=pointer]:
+              - img [ref=e535]
+            - button "Shape lines" [ref=e540] [cursor=pointer]:
+              - img [ref=e541]
+        - generic [ref=e546]:
+          - generic [ref=e547]:
+            - generic [ref=e548]:
+              - text: Finder
+              - emphasis [ref=e549]: corners
+            - generic [ref=e550]: 3 markers
+          - generic [ref=e551]:
+            - button "Square" [ref=e552] [cursor=pointer]:
+              - img [ref=e553]
+              - generic [ref=e556]: Square
+            - button "Rounded" [ref=e557] [cursor=pointer]:
+              - img [ref=e558]
+              - generic [ref=e561]: Rounded
+            - button "Circle" [ref=e562] [cursor=pointer]:
+              - img [ref=e563]
+              - generic [ref=e566]: Circle
+        - generic [ref=e567]:
+          - generic [ref=e568]:
+            - generic [ref=e569]:
+              - text: Brand
+              - emphasis [ref=e570]: logo
+            - generic [ref=e571]: Optional
+          - button "Drop a PNG or SVG to centre on the code" [ref=e572] [cursor=pointer]:
+            - img [ref=e573]
+            - generic [ref=e576]: Drop a PNG or SVG to centre on the code
+        - generic [ref=e577]:
+          - generic [ref=e578]:
+            - generic [ref=e579]:
+              - text: Frame
+              - emphasis [ref=e580]: caption
+            - generic [ref=e581]: Below QR
+          - textbox "e.g. Scan to order, Tap to connect" [ref=e582]: Scan me
+      - generic [ref=e583]:
+        - generic [ref=e584]: Preview · Website
+        - img "QR code" [ref=e593]:
+          - img [ref=e594]
+        - generic [ref=e603]: Scan me
+    - generic [ref=e439]:
+      - generic [ref=e440]:
+        - button "Back" [ref=e604] [cursor=pointer]:
+          - img [ref=e605]
+          - text: Back
+        - generic [ref=e441]: 02 / 03 · Style
+      - generic [ref=e442]:
+        - generic [ref=e443]:
+          - img [ref=e607]
+          - text: Compose
+        - generic [ref=e446]: Style
+        - generic [ref=e449]: Get
+      - button "Continue" [active] [ref=e452] [cursor=pointer]:
+        - text: Continue
+        - img [ref=e453]
+  - region "Notifications alt+T"

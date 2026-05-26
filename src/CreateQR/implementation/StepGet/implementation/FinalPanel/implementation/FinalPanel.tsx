@@ -1,14 +1,19 @@
+import type { QrFormat } from "../../../../useCreateQRHandler";
 import type { FinalPanelProps } from "./FinalPanelProps";
 
-type Format = "png" | "svg" | "pdf" | "eps";
-const FORMATS: Array<{ ext: Format; label: string; size: string; rec?: boolean }> = [
-  { ext: "png", label: "PNG", size: "2048px", rec: true },
+const FORMATS: Array<{ ext: QrFormat; label: string; size: string }> = [
+  { ext: "png", label: "PNG", size: "2048px" },
   { ext: "svg", label: "SVG", size: "vector" },
   { ext: "pdf", label: "PDF", size: "print" },
   { ext: "eps", label: "EPS", size: "vector" },
 ];
 
-export function FinalPanel({ style, onDownload, renderStage }: FinalPanelProps) {
+export function FinalPanel({
+  style,
+  selectedFormat,
+  onSelectFormat,
+  renderStage,
+}: FinalPanelProps) {
   return (
     <div className="atl-get-final">
       <div className="atl-hero__kicker" style={{ margin: 0 }}>
@@ -33,19 +38,24 @@ export function FinalPanel({ style, onDownload, renderStage }: FinalPanelProps) 
         </div>
       )}
 
-      <div className="atl-format-row">
-        {FORMATS.map((f) => (
-          <button
-            key={f.ext}
-            type="button"
-            className="atl-format-tile"
-            data-recommended={f.rec || undefined}
-            onClick={() => onDownload(f.ext)}
-          >
-            <div className="ext">{f.label}</div>
-            <div className="size">{f.size}</div>
-          </button>
-        ))}
+      <div className="atl-format-row" role="radiogroup" aria-label="Download format">
+        {FORMATS.map((f) => {
+          const selected = f.ext === selectedFormat;
+          return (
+            <button
+              key={f.ext}
+              type="button"
+              role="radio"
+              aria-checked={selected}
+              className="atl-format-tile"
+              data-selected={selected || undefined}
+              onClick={() => onSelectFormat(f.ext)}
+            >
+              <div className="ext">{f.label}</div>
+              <div className="size">{f.size}</div>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

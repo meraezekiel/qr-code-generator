@@ -39,7 +39,11 @@ export function useQrArtHandler(value: string, style: StyleState) {
       type: "svg" as const,
       data,
       margin: 0,
-      qrOptions: { errorCorrectionLevel: "M" as const },
+      qrOptions: {
+        errorCorrectionLevel: style.logoDataUrl
+          ? ("H" as const)
+          : ("M" as const),
+      },
       dotsOptions: { type: DOT_TYPE_BY_SHAPE[style.shape], color: palette.fg },
       backgroundOptions: { color: palette.bg },
       cornersSquareOptions: {

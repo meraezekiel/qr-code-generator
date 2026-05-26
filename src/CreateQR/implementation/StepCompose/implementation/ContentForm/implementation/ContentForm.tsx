@@ -1,8 +1,14 @@
-import { MousePointerClick, Upload } from "lucide-react";
+import { AlertCircle, MousePointerClick } from "lucide-react";
 import { FIELDS_BY_TYPE } from "../../../../useCreateQRHandler";
 import type { ContentFormProps } from "./ContentFormProps";
+import { FileUploadField } from "./FileUploadField";
 
-export function ContentForm({ type, content, onContentChange }: ContentFormProps) {
+export function ContentForm({
+  type,
+  content,
+  fieldErrors,
+  onContentChange,
+}: ContentFormProps) {
   const fields = type ? FIELDS_BY_TYPE[type.id] || [] : [];
 
   return (
@@ -41,6 +47,9 @@ export function ContentForm({ type, content, onContentChange }: ContentFormProps
           <div className="atl-form-stack">
             {fields.map((f) => {
               const id = `f-${f.k}`;
+              const error = fieldErrors[f.k];
+              const errorId = error ? `${id}-error` : undefined;
+              const inputClass = error ? "atl-input atl-input--invalid" : "atl-input";
               return (
                 <div className="atl-field-grp" key={f.k}>
                   <label htmlFor={id}>
@@ -49,15 +58,17 @@ export function ContentForm({ type, content, onContentChange }: ContentFormProps
                   {f.kind === "textarea" ? (
                     <textarea
                       id={id}
-                      className="atl-input"
+                      className={inputClass}
                       placeholder={f.placeholder}
                       value={content[f.k] || ""}
+                      aria-invalid={!!error}
+                      aria-describedby={errorId}
                       onChange={(e) => onContentChange(f.k, e.target.value)}
                     />
                   ) : f.kind === "select" ? (
                     <select
                       id={id}
-                      className="atl-input"
+                      className={inputClass}
                       value={content[f.k] || (f.options && f.options[0]) || ""}
                       onChange={(e) => onContentChange(f.k, e.target.value)}
                     >
@@ -66,29 +77,33 @@ export function ContentForm({ type, content, onContentChange }: ContentFormProps
                       ))}
                     </select>
                   ) : f.kind === "file" ? (
-                    <button
-                      type="button"
-                      className="atl-input"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 10,
-                        justifyContent: "flex-start",
-                        color: "var(--muted-deep)",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <Upload size={16} strokeWidth={1.5} /> Choose a{" "}
-                      {f.accept ? "PDF" : "file"} to upload
-                    </button>
+                    <FileUploadField
+                      fieldKey={f.k}
+                      inputId={id}
+                      value={content[f.k] || ""}
+                      accept={f.accept}
+                      onContentChange={onContentChange}
+                    />
                   ) : (
                     <input
                       id={id}
-                      className="atl-input"
+                      className={inputClass}
                       placeholder={f.placeholder}
                       value={content[f.k] || ""}
+                      inputMode={f.validate === "url" ? "url" : undefined}
+                      autoCapitalize={f.validate === "url" ? "off" : undefined}
+                      autoCorrect={f.validate === "url" ? "off" : undefined}
+                      spellCheck={f.validate === "url" ? false : undefined}
+                      aria-invalid={!!error}
+                      aria-describedby={errorId}
                       onChange={(e) => onContentChange(f.k, e.target.value)}
                     />
+                  )}
+                  {error && (
+                    <div id={errorId} className="atl-field-error" role="alert">
+                      <AlertCircle size={12} strokeWidth={2} />
+                      <span>{error}</span>
+                    </div>
                   )}
                 </div>
               );

@@ -1,10 +1,10 @@
-import { Upload } from "lucide-react";
 import {
   PRESET_PALETTES,
   type CornerId,
   type ShapeId,
 } from "../../../../useCreateQRHandler";
 import type { StyleControlsProps } from "./StyleControlsProps";
+import { LogoUploadField } from "./LogoUploadField";
 
 const SHAPES: Array<{ id: ShapeId; sym: JSX.Element }> = [
   {
@@ -159,21 +159,10 @@ export function StyleControls({ style, onStyleChange }: StyleControlsProps) {
           </span>
           <span className="tag">Optional</span>
         </div>
-        <button
-          type="button"
-          className="atl-input"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-            justifyContent: "flex-start",
-            color: "var(--muted-deep)",
-            cursor: "pointer",
-          }}
-        >
-          <Upload size={16} strokeWidth={1.5} />
-          <span>Drop a PNG or SVG to centre on the code</span>
-        </button>
+        <LogoUploadField
+          value={style.logoDataUrl}
+          onChange={(d) => onStyleChange({ logoDataUrl: d })}
+        />
       </div>
 
       <div className="atl-style-block">

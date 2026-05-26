@@ -4,7 +4,7 @@ import type { ActionBarProps } from "./ActionBarProps";
 
 const STEPS = ["Compose", "Style", "Get"] as const;
 
-export function ActionBar({ step, goTo, canAdvance, onDownload }: ActionBarProps) {
+export function ActionBar({ step, goTo, canAdvance, selectedFormat, onDownload }: ActionBarProps) {
   return (
     <div className="atl-actionbar">
       <div className="atl-actionbar__left">
@@ -64,7 +64,7 @@ export function ActionBar({ step, goTo, canAdvance, onDownload }: ActionBarProps
             onClick={onDownload}
           >
             <Download size={14} strokeWidth={2} />
-            Download PNG
+            {`Download ${selectedFormat.toUpperCase()}`}
           </button>
         )}
       </div>

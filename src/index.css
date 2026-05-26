@@ -341,13 +341,125 @@ html, body {
   border-radius: var(--r);
   font-size: 14px;
   color: var(--ink);
+  caret-color: var(--ink);
   outline: none;
   font-family: var(--sans);
   transition: all 150ms var(--e);
 }
+input.atl-input, textarea.atl-input {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='22' viewBox='0 0 16 22'><g fill='none' stroke-linecap='round'><path d='M5 3 L11 3 M5 19 L11 19 M8 3 L8 19' stroke='%23ffffff' stroke-width='3.5'/><path d='M5 3 L11 3 M5 19 L11 19 M8 3 L8 19' stroke='%231a1817' stroke-width='1.6'/></g></svg>") 8 11, text;
+}
 .atl-input:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(26,24,23,0.06); }
 .atl-input::placeholder { color: var(--muted); }
 textarea.atl-input { min-height: 88px; resize: vertical; font-family: var(--sans); }
+
+.atl-input--invalid { border-color: var(--clay); background: #fff7f3; }
+.atl-input--invalid:focus { border-color: var(--clay); box-shadow: 0 0 0 3px rgba(200,84,42,0.10); }
+
+.atl-field-error {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11.5px; color: var(--clay);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.atl-field-error svg { flex: none; }
+
+/* ─── FILE UPLOAD ───────────────────────────── */
+.atl-upload-trigger {
+  display: flex; align-items: center; gap: 10px;
+  justify-content: flex-start;
+  color: var(--muted-deep);
+  cursor: pointer;
+  text-align: left;
+}
+.atl-upload-trigger:disabled { cursor: progress; opacity: 0.85; }
+.atl-upload-trigger:not(:disabled):hover { border-color: var(--ink); }
+
+.atl-upload {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  background: var(--forest-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r);
+}
+.atl-upload__icon {
+  width: 28px; height: 28px;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+  color: #fff;
+  display: grid; place-items: center;
+  flex: none;
+}
+.atl-upload__body { flex: 1; min-width: 0; }
+.atl-upload__name {
+  font-size: 13px; font-weight: 600; color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.atl-upload__hint { font-size: 11px; color: var(--muted-deep); margin-top: 1px; }
+.atl-upload__btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-sm);
+  padding: 6px 9px;
+  font-size: 11.5px; font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: all 120ms var(--e);
+  flex: none;
+}
+.atl-upload__btn:hover { border-color: var(--ink); }
+.atl-upload__btn--ghost {
+  padding: 6px;
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted-deep);
+}
+.atl-upload__btn--ghost:hover { color: var(--ink); background: rgba(0,0,0,0.04); }
+
+@keyframes atl-spin { to { transform: rotate(360deg); } }
+.atl-spin { animation: atl-spin 800ms linear infinite; }
+
+/* ─── LOGO UPLOAD (drag & drop) ──────────────────── */
+.atl-logo-drop { transition: all 150ms var(--e); }
+.atl-logo-drop[data-drop="true"] {
+  border-color: var(--forest);
+  background: var(--forest-soft);
+  color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(27,94,58,0.10);
+}
+
+.atl-logo-card {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px;
+  background: var(--forest-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r);
+  transition: all 150ms var(--e);
+}
+.atl-logo-card[data-drop="true"] {
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px rgba(27,94,58,0.10);
+}
+.atl-logo-card__preview {
+  width: 36px; height: 36px;
+  border-radius: var(--r-sm);
+  background: var(--white);
+  border: 1px solid var(--hairline);
+  overflow: hidden;
+  display: grid; place-items: center;
+  flex: none;
+  padding: 4px;
+}
+.atl-logo-card__preview img {
+  max-width: 100%; max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.atl-logo-card__body { flex: 1; min-width: 0; }
+.atl-logo-card__title { font-size: 13px; font-weight: 600; color: var(--ink); }
+.atl-logo-card__hint { font-size: 11px; color: var(--muted-deep); margin-top: 1px; }
 
 .atl-tip {
   font-size: 11.5px;
@@ -779,10 +891,13 @@ textarea.atl-input { min-height: 88px; resize: vertical; font-family: var(--sans
 .atl-format-tile:hover { border-color: var(--ink); }
 .atl-format-tile .ext { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--ink); }
 .atl-format-tile .size { font-size: 10px; color: var(--muted); }
+.atl-format-tile[data-selected="true"],
 .atl-format-tile[data-recommended="true"] {
   background: var(--ink); color: var(--lime); border-color: var(--ink);
 }
+.atl-format-tile[data-selected="true"] .ext,
 .atl-format-tile[data-recommended="true"] .ext { color: var(--lime); }
+.atl-format-tile[data-selected="true"] .size,
 .atl-format-tile[data-recommended="true"] .size { color: rgba(223,252,96,0.7); }
 
 .atl-get-side {

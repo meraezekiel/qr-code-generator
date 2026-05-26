@@ -4,8 +4,8 @@ import { StepCompose } from "./StepCompose";
 import { StepGet } from "./StepGet";
 import { StepStyle } from "./StepStyle";
 import { TopNav } from "./TopNav";
-import { useCreateQRHandler } from "./useCreateQRHandler";
-import { renderQrPng } from "../../lib/renderQrPng";
+import { useCreateQRHandler, type QrFormat } from "./useCreateQRHandler";
+import { renderQr } from "../../lib/renderQrPng";
 
 export function CreateQR() {
   const {
@@ -13,29 +13,29 @@ export function CreateQR() {
     set,
     setContent,
     setStyle,
+    setFormat,
     selectType,
     goTo,
     canAdvance,
     qrValue,
     currentType,
+    fieldErrors,
   } = useCreateQRHandler();
 
-  const onDownload = async (format: "png" | "svg" | "pdf" | "eps" = "png") => {
-    if (format !== "png") {
-      toast.info(`${format.toUpperCase()} export is coming soon`);
-      return;
-    }
+  const onDownload = async (format: QrFormat) => {
     try {
-      const blob = await renderQrPng(qrValue, state.style);
+      const blob = await renderQr(qrValue, state.style, format);
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `qr-${Date.now()}.png`;
+      a.download = `qr-${Date.now()}.${format}`;
       document.body.appendChild(a);
       a.click();
       a.remove();
       URL.revokeObjectURL(url);
-      toast.success("QR downloaded", { description: "Saved to your downloads." });
+      toast.success(`QR downloaded`, {
+        description: `Saved as ${format.toUpperCase()} to your downloads.`,
+      });
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Failed to render QR";
       toast.error("Download failed", { description: msg });
@@ -50,6 +50,7 @@ export function CreateQR() {
           <StepCompose
             state={state}
             currentType={currentType}
+            fieldErrors={fieldErrors}
             onSelectType={selectType}
             onContentChange={setContent}
             onQueryChange={(q) => set({ query: q })}
@@ -65,14 +66,20 @@ export function CreateQR() {
           />
         )}
         {state.step === 2 && (
-          <StepGet style={state.style} qrValue={qrValue} onDownload={onDownload} />
+          <StepGet
+            style={state.style}
+            qrValue={qrValue}
+            selectedFormat={state.format}
+            onSelectFormat={setFormat}
+          />
         )}
       </div>
       <ActionBar
         step={state.step}
         goTo={goTo}
         canAdvance={canAdvance}
-        onDownload={() => onDownload("png")}
+        selectedFormat={state.format}
+        onDownload={() => onDownload(state.format)}
       />
     </div>
   );
